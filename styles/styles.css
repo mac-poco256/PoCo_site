@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/*
+ * for Common styles.
+ */
+body {
+    background-color: #ffffff;
+    background: url("http://www.poco256.org/parts/wall.png");
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+.centering {
+    width: 640px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+hr.sectionline {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5em;
+    margin-right: 0;
+    margin-bottom: 0.5em;
+    padding: 0;
+    width: 100%;
+    height: 0.5em;
+    background: #ff9fc3;
+    background: -moz-linear-gradient(top, #ffcff3, #ff9fc3, #df7fa3);
+    background: -webkit-linear-gradient(top, #ffcff3, #ff9fc3, #df7fa3);
+    background: -ms-linear-gradient(top, #ffcff3, #ff9fc3, #df7fa3);
+    background: -o-linear-gradient(top, #ffcff3, #ff9fc3, #df7fa3);
+    background: linear-gradient(top, #ffcff3, #ff9fc3, #df7fa3);
+    border: none;
+    border-radius: 0.5em;
+}
+img.back, img.prev, img.next {
+    width: 32px;
+    height: 20px;
+}
+img.banner {
+    width: 200px;
+    height: 40px;
+}
+/*
+html[lang=en] body {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+*/
+
+
+/*
+ * for Title contents.
+ */
+body.title .left {
+    display: inline-block;
+    width: 310px;
+}
+body.title .right {
+    display: inline-block;
+    width: 320px;
+}
+body.title .right .toc {
+    width: 295px;
+    margin-left: 10px;
+    margin-bottom: 0.50em;
+    padding-right: 5px;
+    font-size: 1.0em;
+    line-height: 1.0em;
+    border-style: ridge solid solid ridge;
+    border-width: 2px;
+    border-radius: 0.75em 0.25em 0.25em 0.25em;
+    text-align: right;
+}
+
+
+/*
+ * for Strings contents.
+ */
+body.strings {
+    color: #af5479;
+    text-align: justify;
+    -moz-text-align-last: left;
+    -webkit-text-align-last: left;
+    -ms-text-align-last: left;
+    -o-text-align-last: left;
+    text-align-last: left;
+}
+body.strings h3.header {
+    margin-left: 40%;
+    margin-bottom: 0.4em;
+    padding-right: 0.2em;
+    border-right: solid #e787ab 0.4em;
+    border-bottom: solid #e787ab 0.1em;
+    text-align: right;
+    -moz-text-align-last: right;
+    -webkit-text-align-last: right;
+    -ms-text-align-last: right;
+    -o-text-align-last: right;
+    text-align-last: right;
+}
+body.strings a {
+    color: #af5479;
+    text-decoration: underline;
+}
+
+
+/*
+ * for Manual contens.
+ */
+body.man_toc, body.man_contents {
+    color: #af5479;
+    text-align: justify;
+    -moz-text-align-last: left;
+    -webkit-text-align-last: left;
+    -ms-text-align-last: left;
+    -o-text-align-last: left;
+    text-align-last: left;
+}
+body.man_toc h3.chapter {
+    width: 97.5%;
+    margin-left: auto;
+    margin-bottom: 0.4em;
+    padding-right: 0.2em;
+    border-right: solid #e787ab 0.4em;
+    border-bottom: solid #e787ab 0.1em;
+    text-align: right;
+    -moz-text-align-last: right;
+    -webkit-text-align-last: right;
+    -ms-text-align-last: right;
+    -o-text-align-last: right;
+    text-align-last: right;
+}
+body.man_contents h3 {
+    margin-left: 40%;
+    margin-bottom: 0.4em;
+    padding-right: 0.2em;
+    border-right: solid #e787ab 0.4em;
+    border-bottom: solid #e787ab 0.1em;
+    text-align: right;
+    -moz-text-align-last: right;
+    -webkit-text-align-last: right;
+    -ms-text-align-last: right;
+    -o-text-align-last: right;
+    text-align-last: right;
+}
+body.man_contents h4 {
+    margin-bottom: 0.2em;
+    padding-left: 0.25em;
+    border-radius: 0.25em 0.0em 0.0em 0.25em;
+    border-left: solid #e787ab 0.5em;
+}
+body.man_toc div.section {
+    padding-left: 2.0em;
+}
+body.man_toc a, body.man_contents a {
+    color: #af5479;
+    text-decoration: underline;
+}
+body.man_contents .menu_item {
+    display: inline-block;
+    color: #000000;
+    font-family: monospace;
+    background-color: #efefef;
+    border: #3f3f9f solid 1px;
+    border-radius: 0.25em;
+    padding: 0.2em;
+    margin: 0.0em 0.25em;
+}
+body.man_contents .terminal {
+    display: block;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-family: monospace;
+    background-color: #000000;
+    border-radius: 0.25em;
+    padding: 0.2em 1.0em;
+    margin: 0.5em 1.0em 0.0em;
+}
+body.man_contents .button_item {
+    display: inline-block;
+    color: #000000;
+    font-family: monospace;
+    background-color: #efefef;
+    border: #000000 solid 1px;
+    border-radius: 0.25em;
+    padding: 0.2em;
+    margin: 0.0em 0.25em;
+}
+body.man_contents table {
+    width: 95.0%;
+    margin: 0.0em auto;
+}
+body.man_contents table tr {
+}
+body.man_contents table tr th {
+    padding: 0.25em;
+    background-color: #3f3f3f;
+    color: #ffffff;
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+body.man_contents table tr td {
+    padding: 0.25em;
+    background-color: #ffdff3;
+    text-align: left;
+    vertical-align: top;
+}
+body.man_contents div.figs_block {
+    display: inline-block;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+
+/*
+ * misc...
+ */
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.maincolor {
+    color: #af5479;
+}
+.textred {
+    color: #ef0000;
+}
+.textgreen {
+    color: #00ef00;
+}
+.textmagenta {
+    color: #ef00ef;
+}
+.bold {
+    font-weight: bold;
+}
+.ql {
+    text-align: left;
+    -moz-text-align-last: left;
+    -webkit-text-align-last: left;
+    -ms-text-align-last: left;
+    -o-text-align-last: left;
+    text-align-last: left;
+}
+.qc {
+    text-align: center;
+    -moz-text-align-last: center;
+    -webkit-text-align-last: center;
+    -ms-text-align-last: center;
+    -o-text-align-last: center;
+    text-align-last: center;
+}
+.qr {
+    text-align: right;
+    -moz-text-align-last: right;
+    -webkit-text-align-last: right;
+    -ms-text-align-last: right;
+    -o-text-align-last: right;
+    text-align-last: right;
+}
+.eql {
+    text-align: justify;
+    -moz-text-align-last: left;
+    -webkit-text-align-last: left;
+    -ms-text-align-last: left;
+    -o-text-align-last: left;
+    text-align-last: left;
+}
+.eqc {
+    text-align: justify;
+    -moz-text-align-last: center;
+    -webkit-text-align-last: center;
+    -ms-text-align-last: center;
+    -o-text-align-last: center;
+    text-align-last: center;
+}
+.eqr {
+    text-align: justify;
+    -moz-text-align-last: right;
+    -webkit-text-align-last: right;
+    -ms-text-align-last: right;
+    -o-text-align-last: right;
+    text-align-last: right;
+}
+.indhead_1_em {
+    margin-left: 1em;
+}
+.indhead_2_em {
+    margin-left: 2em;
+}
+.indfirst_1_em {
+    text-indent: 1em;
+}
+.indfirst_2_em {
+    text-indent: 2em;
+}
+.indhang_1_em {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.gap_before_1_em {
+    margin-top: 1em;
+}
+.large {
+    font-size: 1.17em;
+    line-height: 1.17em;
+}
+.small {
+    font-size: 0.67em;
+    line-height: 0.67em;
+}
+.strike {
+    text-decoration: line-through;
+}
+.underline {
+    text-decoration: underline;
+}
+.mincho {
+    font-family: serif;
+}
+.gothic {
+    font-family: sans-serif;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::準備</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-004.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>環境設定</h3>
+<div class="indfirst_1_em">
+<p>本ツールを使用するに当たって、いくつか補助的な設定が行えます。</p>
+<p>メニューの<span class="menu_item">PoCo ＞ 環境設定</span>を選択して環境設定を行います。</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../image/image-008.png" alt="環境設定パネル" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>設定内容は次のとおりです。</p>
+</div>
+<p><br /></p>
+
+<h4 id="enable_undo">取り消しを有効</h4>
+<div class="indfirst_1_em">
+<p>画像の編集に伴う「取り消し」を有効にします。</p>
+<p>初期値は有効（チェック済み）です。</p>
+<p>また、このチェックの隣にある最大数で、積み立て可能な取り消しの数を設定できます。</p>
+<p>０で無限となり、初期値は１００です。</p>
+<p><span class="textred">なお、この設定は本ツールの次回起動時から有効になります。</span></p>
+</div>
+<p><br /></p>
+
+<h4 id="enable_colorbuffer">色混合では以前の数値をメモリに保存して結果を再利用</h4>
+<div class="indfirst_1_em">
+<p>複数の色を混ぜ合わせた描画を行う際は、色要素の掛け合わせ（計算）を行います。</p>
+<p>ただ、混合の都度、計算を繰り返すとその分だけ演算の時間がかかるため、色混合の条件と結果をメモリに溜めて、次からの計算ではその結果を利用する（計算させない）ようにして演算時間を短縮するようにしています。</p>
+<p>ただし、メモリに溜めるとそれだけ消費メモリが増すため、空きメモリに余裕が少ない場合はこの機能を無効化してください。</p>
+<p>初期値は有効（チェック済み）です。</p>
+<p><span class="textred">なお、この設定は本ツールの次回起動時から有効になります。</span></p>
+</div>
+<p><br /></p>
+
+<h4 id="save_docwindow">ドキュメントウィンドウの初期位置を記憶</h4>
+<div class="indfirst_1_em">
+<p>最初に開いたドキュメントウィンドウ（主ウィンドウ）の位置を記憶し、次回起動時に開く同ウィンドウの位置を再現します。</p>
+<p>初期値は無効（チェック無し）です。</p>
+<p><span class="textred">なお、この設定は本ツールの次回起動時から有効になります。</span></p>
+</div>
+<p><br /></p>
+
+<h4 id="window_pos">補助ウィンドウの位置を固定化</h4>
+<div class="indfirst_1_em">
+<p>補助ウィンドウの位置を固定化（移動禁止）とします。移動が禁止されるだけで、ウィンドウの開閉やサイズ変更は可能です。</p>
+<p>初期値は無効（チェック無し）です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="enable_liveresize">ウィンドウの変形に追随して表示</h4>
+<div class="indfirst_1_em">
+<p>ウィンドウハンドルをつかんでリサイズする際に、変形しつつウィンドウ内の表示も更新するか更新しないかを決めます。</p>
+<p>この機能は主ウィンドウのリサイズ時のみ反映します。</p>
+<p>初期値は有効（チェック済み）です。</p>
+<div class="indhead_1_em small">
+<p>この機能は、もともと G3 な PPC Mac とかだと LiveResize が辛そうと感じたため設けました。</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="enable_eraser">消しゴムを有効</h4>
+<div class="indfirst_1_em">
+<p>ペンタブレットを使用している場合に、ペンタブレットの消しゴム判定を検知し機能を有効化します。</p>
+<p>初期値は有効（チェック済み）です。</p>
+<div class="indhead_1_em small">
+<p>消しゴム検出は OS の判定に依存しています。</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="invert_selection">選択範囲は色反転した塗りつぶしで表示</h4>
+<div class="indfirst_1_em">
+<p>範囲選択した場合に、その選択領域内を反転（２５６色での反転）して表示します</p>
+<p>初期値は無効（チェック無し）です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="live_selection">選択範囲の変形は編集結果を随時表示</h4>
+<div class="indfirst_1_em">
+<p>選択領域の編集（移動・複写・リサイズ・回転）を行う場合の表示の設定です。</p>
+<p>機能を無効とするか有効とするかの利点と欠点は次のとおりです。</p>
+<ul class="indhead_1_em">
+<li>チェック無しの場合（無効化）<br />選択枠のみを変形します。操作が完了した時点で領域内の画像を加工し表示します。<br />変形中の処理はこちらの設定のほうが早いです。</li>
+<li>チェック済みの場合（有効化）<br />選択枠内の画像を逐次加工して表示します。枠のみの変形では無く直感的な結果が得られるのですが、その分、時間がかかります。</li>
+</ul>
+<p>初期値は無効（チェック無し）です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="show_scrollbar">スクロールバーの表示</h4>
+<div class="indfirst_1_em">
+<p>主ウィンドウ、表示ウィンドウのスクロールバーの表示について指定します。</p>
+<p>スクロールバーの表示は<span class="menu_item">システム環境設定 ＞ 一般 ＞ スクロールバーの表示</span>にて設定しますが、本ツールではこの設定を（本ツールに対してのみ）上書きします。</p>
+<ul class="indhead_1_em">
+<li>ＯＳの設定<br />システム環境設定での設定のままとします。</li>
+<li>常時<br />システム環境設定の設定によらず、常に表示します<span class="small">（システム環境設定の「常に表示」相当です）</span>。</li>
+<li>適宜<br />システム環境設定の設定によらず、必要に応じて表示します<span class="small">（システム環境設定の「スクロール時に表示」相当です）</span>。</li>
+</ul>
+<p>初期値はＯＳの設定です。</p>
+<p><span class="textred">なお、この設定は本ツールの次回起動時から有効になります。</span></p>
+<div class="indhead_1_em small">
+<p>この機能は、特定の条件が重なるとスクロールが極端に遅くなる（部分表示のはずが常に全画面再描画となる）ことがある現象を回避するためのものです。Yosemite で常時（常に表示）とすると発現することがあるようです。</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="pixel_grid">ピクセルグリッドの間隔</h4>
+<div class="indfirst_1_em">
+<p>ピクセルグリッドの表示方法について指定します。</p>
+<ul class="indhead_1_em">
+<li>数値が０<br />ピクセルグリッドを表示しません。</li>
+<li>数値が１<br />ピクセルグリッドを表示する場合、常に実線を引きます。</li>
+<li>数値が２以上<br />ピクセルグリッドを表示する場合、指定した間隔ごとに実線を引きます。</li>
+</ul>
+<p>初期値は０（ピクセルグリッドを表示しない）です。</p>
+<p>また、ピクセルグリッドは<span class="bold">主ウィンドウ</span>で<span class="bold">表示倍率が４倍以上</span>の場合にのみ表示します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="trans_grid">透明グリッドを表示</h4>
+<div class="indfirst_1_em">
+<p>すべてのレイヤーで透明なピクセルだった場合の表示方法について設定します。</p>
+<p>チェック済みの場合、白と指定した色とでパターンを作ったグリッド表示となります。</p>
+<p>チェック無しの場合、指定した色のみとなります。</p>
+<p>色の指定はＲＧＢで行います。</p>
+<p>初期値は透明グリッド表示（チェック済み）で、色は 204、204、204（#cccccc）です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="preview">レイヤープレビュー</h4>
+<div class="indfirst_1_em">
+<p>品質ではレイヤーウィンドウに表示するプレビュー画像の品質を設定します。</p>
+<p>０以上の正の値が指定でき、初期値は４です。</p>
+<p>１が最低品質で値を増やすと表示品質が向上します。ただし、品質を上げると（補間縮小の）演算時間が長くなるため、むやみに大きな数値を指定しないでください。</p>
+<p>なお、値０は特別な指定となり、最高品質となります<span class="small">（編集中の画像全体を間引くことなくプレビューに用います。そのため、表示品質は高いのですがその分、動作が重くなります）</span>。</p>
+<p>また、大きさではレイヤーウィンドウに表示するプレビュー画像の大きさを設定します。</p>
+<p>２４から２５５までの正の値が指定でき、初期値は４８です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="gray_to_alpha">彩度無しを透明度にして保存</h4>
+<div class="indfirst_1_em">
+<p>無彩色<span class="small">（彩度の無い色のことで、RGB の各値が同じになります）</span>である色要素の保存方法を指定します。</p>
+<p>チェック済みの場合、完全な黒（RGB が #000000）、完全な白（RGB が #ffffff）を除いた無彩色（彩度の無い色）の明るさを透明度に読み替えて<span class="small">（tRNS CHUNK にて）</span>保存します。</p>
+<p> チェック無しの場合、すべての色は PLTE CHUNK にて保存します<span class="small">（tRNS CHUNK には透明・不透明の情報のみを格納します）</span>。
+<p>初期値は彩度無しは透明度にしない（チェック無し）です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="curve_with_point_guide">補間曲線のガイドライン表示</h4>
+<div class="indfirst_1_em">
+<p>補間曲線のガイドラインの表示方法を設定します。</p>
+<ul class="indhead_1_em">
+<li>直線のみ<br />制御点の間を直線で結んだ表示をします（補間曲線は表示しません）。</li>
+<li>曲線のみ<br />制御点の間を補間曲線で結んだ表示をします。</li>
+<li>両方<br />直線、曲線の両方を表示します。</li>
+</ul>
+<p>初期値は両方です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="curve_with_point">補間曲線</h4>
+<div class="indfirst_1_em">
+<p>補間曲線の演算方法を設定します。</p>
+<ul class="indhead_1_em">
+<li>ラグランジュ<br />ラグランジュ補間の演算を行います。</li>
+<li>スプライン<br />スプライン曲線の演算を行います。</li>
+</ul>
+<p>初期値はラグランジュです。</p>
+</div>
+<p><br /></p>
+
+<h4 id="range_of_flood_fill">色範囲</h4>
+<div class="indfirst_1_em">
+<p>（境界色を伴わない）塗り選択の色の範囲を指定します。</p>
+<p>初期値は０です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="synchro">表示ウィンドウと表示位置を同期</h4>
+<div class="indfirst_1_em">
+<p>主ウィンドウの表示位置と表示ウィンドウの表示位置を同期します。</p>
+<p>初期値は同期しない（チェック無し）です。</p>
+</div>
+<p><br /></p>
+
+<h4 id="synchro_color">選択色とパレットの表示を同期</h4>
+<div class="indfirst_1_em">
+<p>パレットウィンドウの表示位置と選択色を同期します。</p>
+<p>初期値は同期しない（チェック無し）です。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-003.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-005.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

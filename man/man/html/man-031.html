@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::描画機能</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-031.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3><img src="../image/image-040.png" alt="" />&nbsp;筆圧比例自由曲線</h3>
+<div class="indfirst_1_em">
+<p>筆圧比例自由曲線は<a href="./man-030.html">自由曲線</a>と似た機能を持ちます。</p>
+<p>描画時の操作方法は自由曲線と同一で、太さや濃度（タイルパターンの密度、色混合の濃度）が筆圧に比例して変化します。</p>
+<p>また、太さは<img src="../image/image-069.png" alt="" /><img src="../image/image-070.png" alt="" /><img src="../image/image-071.png" alt="" />の各ボタンの選択、濃度は<img src="../image/image-072.png" alt="" /><img src="../image/image-073.png" alt="" /><img src="../image/image-074.png" alt="" />の各ボタンの選択によって、筆圧を用いた値とするか否かを切り替えます。</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_normal"><img src="../image/image-051.png" alt="" />&nbsp;通常</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>ペン形状パターンで選択しているパターンを使用します。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例したタイルパターン密度となります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>スライダで選択している値のタイルパターン密度となります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>タイルパターンで選択しているパターンを使用します。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-118.png" alt="筆圧比例自由曲線 通常" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_uniden"><img src="../image/image-052.png" alt="" />&nbsp;均一濃度</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>スライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>スライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-119.png" alt="筆圧比例自由曲線 均一濃度" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_den"><img src="../image/image-053.png" alt="" />&nbsp;濃度</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>スライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>スライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-120.png" alt="筆圧比例自由曲線 濃度" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_air"><img src="../image/image-054.png" alt="" />&nbsp;霧吹き</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値の８倍を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の８倍の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>スライダで選択している値の８倍の太さになります。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した点の描画頻度とします。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>スライダで選択している値を点の描画頻度とします。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>スライダで選択している値を点の描画頻度とします。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-121.png" alt="筆圧比例自由曲線 霧吹き" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_grad"><img src="../image/image-055.png" alt="" />&nbsp;グラデーション</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値の８倍を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の８倍の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>スライダで選択している値の８倍の太さになります。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した点の描画頻度とします。<br />また、同値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>スライダで選択している値を点の描画頻度とします。<br />また、同値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>スライダで選択している値を点の描画頻度とします。<br />また、同値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-122.png" alt="筆圧比例自由曲線 グラデーション" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_rand"><img src="../image/image-056.png" alt="" />&nbsp;拡散</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値の８倍を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の８倍の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>スライダで選択している値の８倍の太さになります。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した点の移動頻度とします。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>スライダで選択している値を点の移動頻度とします。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>スライダで選択している値を点の移動頻度とします。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-123.png" alt="筆圧比例自由曲線 拡散" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="presfree_water"><img src="../image/image-057.png" alt="" />&nbsp;ぼかし</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col style="width: 2.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th rowspan="3">ペン形状<br />太さ</th>
+<th><img src="../image/image-069.png" alt="" /></th>
+<td>スライダで選択している値を最大値とし、筆圧に比例した太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-070.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+<tr>
+<th><img src="../image/image-071.png" alt="" /></th>
+<td>スライダで選択している値の太さになります。</td>
+</tr>
+
+<tr>
+<th rowspan="3">タイルパターン<br />濃度</th>
+<th><img src="../image/image-072.png" alt="" /></th>
+<td>タイルパターンや濃度のスライダは使用しません。</td>
+</tr>
+<tr>
+<th><img src="../image/image-073.png" alt="" /></th>
+<td>タイルパターンや濃度のスライダは使用しません。</td>
+</tr>
+<tr>
+<th><img src="../image/image-074.png" alt="" /></th>
+<td>タイルパターンや濃度のスライダは使用しません。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-124.png" alt="筆圧比例自由曲線 ぼかし" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-030.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-032.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

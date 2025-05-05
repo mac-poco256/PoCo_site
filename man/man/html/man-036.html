@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::描画機能</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-036.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3><img src="../image/image-046.png" alt="" />&nbsp;塗りつぶし円／楕円</h3>
+<div class="indfirst_1_em">
+<p>塗りつぶし円／楕円は、領域内を塗りつぶした円／楕円を描く機能です。</p>
+<p>塗りつぶしまでの流れは<a href="./man-035.html">円／楕円枠</a>と同様の操作により行います。</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_normal"><img src="../image/image-051.png" alt="" />&nbsp;通常</h4>
+<div class="indfirst_1_em">
+<p>選択しているタイルパターンによって塗りつぶします。</p>
+<p>ペン形状、太さのスライダ、濃度のスライダは使用しません。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-153.png" alt="塗りつぶし円／楕円 通常" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_uniden"><img src="../image/image-052.png" alt="" />&nbsp;均一濃度</h4>
+<div class="indfirst_1_em">
+<p>濃度のスライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</p>
+<p>ペン形状、タイルパターン、太さのスライダは使用しません。</p>
+<p>領域内を一定の濃度を保って塗りつぶし（色混合）します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-154.png" alt="塗りつぶし円／楕円 均一濃度" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_den"><img src="../image/image-053.png" alt="" />&nbsp;濃度</h4>
+<div class="indfirst_1_em">
+<p>太さのスライダで選択している値の１６倍を領域の分割量とします。</p>
+<p>濃度のスライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</p>
+<p>ペン形状、タイルパターンは使用しません。</p>
+<p>領域の中心が最大の濃さとなるよう、外側から順々に濃く塗りつぶし（色混合）します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-155.png" alt="塗りつぶし円／楕円 濃度" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_air"><img src="../image/image-054.png" alt="" />&nbsp;霧吹き</h4>
+<div class="indfirst_1_em">
+<p>太さのスライダで選択している値の１６倍を領域の分割量とします。</p>
+<p>濃度のスライダで選択している値を点の描画頻度とします。</p>
+<p>ペン形状、タイルパターンは使用しません。</p>
+<p>領域の中心が最大の頻度となるよう、外側から順々に頻度を増して点を描画します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-156.png" alt="塗りつぶし円／楕円 霧吹き" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_grad"><img src="../image/image-055.png" alt="" />&nbsp;グラデーション</h4>
+<div class="indfirst_1_em">
+<p>太さのスライダで選択している値の１６倍を領域の分割量とします。</p>
+<p>濃度のスライダで選択している値を点の描画頻度、且つ混ぜ合わせ濃さとして色混合を行います。</p>
+<p>ペン形状、タイルパターンは使用しません。</p>
+<p>領域の中心が最大の濃さとなるよう、外側から順々に濃く塗りつぶし（色混合）します。</p>
+<p>また、領域の中心が最大の頻度となるよう、外側から順々に頻度を増して点を描画します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-157.png" alt="塗りつぶし円／楕円 グラデーション" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_rand"><img src="../image/image-056.png" alt="" />&nbsp;拡散</h4>
+<div class="indfirst_1_em">
+<p>太さのスライダで選択している値を点の移動範囲とします。</p>
+<p>濃度のスライダで選択している値を点の移動頻度とします。</p>
+<p>ペン形状、タイルパターンは使用しません。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-158.png" alt="塗りつぶし円／楕円 拡散" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="ellipsefill_water"><img src="../image/image-057.png" alt="" />&nbsp;ぼかし</h4>
+<div class="indfirst_1_em">
+<p>領域内の各点について、周囲８点との平均をとった値とします。</p>
+<p>ペン形状、タイルパターン、太さのスライダ、濃度のスライダのいづれも使用しません。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-159.png" alt="塗りつぶし円／楕円 ぼかし" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-035.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-037.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

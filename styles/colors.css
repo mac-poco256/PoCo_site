@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*
+ * for border color define.
+ */
+.brcolor_toc {
+    border-color: #e787ab;
+}
+
+
+/*
+ * for simple background color define.
+ */
+.bkcolor_toc {
+    background: #ef9fb3;
+}
+
+
+/*
+ * for gradient background color define.
+ */
+.bkcolor_toc_grad {
+    background: #ef9fb3;
+    background: -moz-linear-gradient(top, #f7b7cb, #ef9fb3, #e787ab);
+    background: -webkit-linear-gradient(top, #f7b7cb, #ef9fb3, #e787ab);
+    background: -ms-linear-gradient(top, #f7b7cb, #ef9fb3, #e7876ab);
+    background: -o-linear-gradient(top, #f7b7cb, #ef9fb3, #e787ab);
+    background: linear-gradient(top, #f7b7cb, #ef9fb3, #e787ab);
+}
+body.man_contents .button_item {
+    background: #efefef;
+    background: -moz-linear-gradient(top, #ffffff, #efefef, #e7e7e7);
+    background: -webkit-linear-gradient(top, #ffffff, #efefef, #e7e7e7);
+    background: -ms-linear-gradient(top, #ffffff, #efefef, #e7e7e7);
+    background: -o-linear-gradient(top, #ffffff, #efefef, #e7e7e7);
+    background: linear-gradient(top, #ffffff, #efefef, #e7e7e7);
+}
+
+
+/*
+ * for dropshadow define.
+ */
+.shadow_gray {
+    -moz-box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+}

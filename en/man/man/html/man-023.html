@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::Management of Color Palette</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-023.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>Color mixing</h3>
+<div class="indfirst_1_em">
+<p>The PoCo.app has especially feature which is able to mix color although it only support for 256 colors.</p>
+<p>The mixing color feature, say, pure white(#ffffff) blend with pure black(#000000), then gray(#7f7f7f) is derived.</p>
+<p>Also, mixing color can blend gray with white or black. So, blending with degree(gradient) is possible.</p>
+<p>Therefore, the PoCo.app has ability to draw with gradient although it supports for 256 colors only.</p>
+</div>
+<div class="small textred">
+<p>However, mixing of color is limited under 256 colors palete.</p>
+<p>If derived color is #7f7f7f but palette dose not contain equivalent color, near color is choosed.</p>
+</div>
+<p><br /></p>
+
+<h4 id="colmix_rgb">with RGB</h4>
+<div class="indfirst_1_em">
+<p>When <a href="./man-007.html#palwin_colmix">color mixing mode</a> on the palttet window indicate RGB, calculate with RGB(Red, Green and Blue).</p>
+<p>Blending is same element of each color, a elememt of red with red, a element of green with green and a element of blue with blue, respectivery.</p>
+</div>
+<p><br /></p>
+
+<h4 id="colmix_hls">with HLS</h4>
+<div class="indfirst_1_em">
+
+<p>When <a href="./man-007.html#palwin_colmix">color mixing mode</a> on the palttet window indicate HLS, calculate with HLS(Hue, Lightness and Saturation).</p>
+<p>Bending of hue regard to the hue circle. Lightness is blended with lightness. Also, Saturation is blended with saturation.</p>
+<p>Thus, RGB blending can not represent that red blended with green result in yellow. However, with HLS blending, the PoCo.app can calculate based on the light three primary colors.</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-022.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-024.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

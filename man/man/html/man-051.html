@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::クリップボード</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-051.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>コピー</h3>
+<div class="indfirst_1_em">
+<p>範囲選択している場合に、クリップボードへコピーできます。</p>
+<p>ファイルフォーマットに PNG を採用していることもあり、クリップボードへは NSPNGPboardType でコピーします。</p>
+<p>範囲形状が任意であっても、常に外接長方形でコピーします。</p>
+<p><br /></p>
+<p>本ツールでクリップボードにコピーする内容は次の CHUNK を用います。</p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>名称</th>
+<th>役割</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>ヘッダ</th>
+<td>本ツールは２５６色の画像のみ扱うため、カラータイプは３（index color）固定です。<br />また、常にインターレース無しです。</td>
+</tr>
+
+<tr>
+<th>iCCP</th>
+<th>ICC プロファイル</th>
+<td>ICC プロファイルを記述します。<br />NSScreen から得られる内容をそのまま埋め込みます。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込む場合（チェック済みの場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>sRGB</th>
+<th>SRGB</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>の SRGB で指定する値をそのまま SRGB の値として記述します。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込まない場合（チェックしていない場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>gAMA</th>
+<th>ガンマ値</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>のガンマ値で指定する値をそのままガンマ値として記述します。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込まない場合（チェックしていない場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>cHRM</th>
+<th>色温度</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>の色温度で指定する各値をそのまま色温度として記述します。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込まない場合（チェックしていない場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>pHYs</th>
+<th>物理スケール</th>
+<td>画像解像度（dpi）を記述します。</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>パレット</th>
+<td>ＲＧＢの色要素でパレットを記述します。<br />本ツールは常に２５６色分の定義を記述します。</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>透明</th>
+<td><a href="./man-022.html">色補助属性の透明</a>を記述します。<br />本ツールでは、透明か不透明かの２段階で画像を編集するため、この CHUNK の値は０あるいは２５５となります。<br />ただし、環境設定で<a href="./man-004.html#gray_to_alpha">彩度無しを透明度にして保存</a>を指定している場合はその限りではありません。<br />本ツールでは常に２５６色分の定義を記述します。</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>非使用<br /><span class="small">独自 CHUNK</span></th>
+<td><a href="./man-022.html">色補助属性の非使用（吸い取りを禁止）</a>を記述します。<br />本ツールでは可・不可の２値ですので、値は０か１となります。また、２５６色分をそのまま羅列して記述します。</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>マスク<br /><span class="small">独自 CHUNK</span></th>
+<td><a href="./man-022.html">色補助属性のマスク（上塗りを禁止）</a>を記述します。<br />本ツールでは可・不可の２値ですので、値は０か１となります。また、２５６色分をそのまま羅列して記述します。</td>
+</tr>
+
+<tr>
+<th>IDAT</th>
+<th>画像</th>
+<td>選択範囲内の画像を格納します。<br />フィルタ処理についてあまり複雑な実装はしておらず、常に none filter のみを使用します。</td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>終端</th>
+<td>クリップボードへコピーしたデータ列の終端です。</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-050.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-052.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

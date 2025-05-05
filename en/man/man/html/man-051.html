@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::PasteBoard Operate</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-051.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>Copy to PasteBoard</h3>
+<div class="indfirst_1_em">
+<p>When there is selection shape, allow to copy to the pasteboard.</p>
+<p>Because of the PoCo.app adopt the PNG as file format, the type of the pasteboard is NSPNGPboardType</p>
+<p>Note that the shape is always the rectangle(bounding rectangle) even if the shape is free style.</p>
+<p><br /></p>
+<p>The PoCo.app using chunks are following:</p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>Image Header</th>
+<td>Since the PoCo.app only support for 256 colos, the Color type of the IHDR is always 3(indexed color).<br />And, the PoCo.app only support for non-interlace.</td>
+</tr>
+
+<tr>
+<th>iCCP</th>
+<th>Embedded ICC Profile</th>
+<td>Store ICC Profile.<br />Storing data is intact that obtain from the NSScreen.<br />When the use of ICC profile is specified(checked) on the <a href="./man-015.html#doc_setup">document setting</a>, this chunk is used.</td>
+</tr>
+
+<tr>
+<th>sRGB</th>
+<th>Standard RGB Color Space</th>
+<td>Specified value on the <a href="./man-015.html#doc_setup">document setting</a> is stored as the SRGB value.<br />When the use of ICC profile is NOT specified(unchecked), this chunk is used.</td>
+</tr>
+
+<tr>
+<th>gAMA</th>
+<th>Image Gamma</th>
+<td>Specified on the <a href="./man-015.html#doc_setup">document setting</a> value is stored as the gamma value.<br />When the use of ICC profile is NOT specified(unchecked), this chunk is used.</td>
+</tr>
+
+<tr>
+<th>cHRM</th>
+<th>Primary Chromaticities and White Point</th>
+<td>Specified values on the <a href="./man-015.html#doc_setup">document setting</a> are stored as the chromaticity setting.<br />When the use of ICC profile is NOT specified(unchecked), this chunk is used.</td>
+</tr>
+
+<tr>
+<th>pHYs</th>
+<th>Physical Pixel Dimensions</th>
+<td>Store image resolution(Dot per Inch, DPI).</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>Palette</th>
+<td>Store the R, G, and B element of each color.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>Transparency</th>
+<td>Store <a href="./man-022.html">the tranparency of the auxiliary attributes of a color</a>.<br />Because of the PoCo.app is use either Transparency or No-Transparentcy, each element have either 0 or 255.<br />However, when <a href="./man-004.html#gray_to_alpha">the grayscale treat as transparency</a> is specified on the preferences panel, do not follow that limitation.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>Not use<br /><span class="small">Private chunk</span></th>
+<td>Store <a href="./man-022.html">the not-use(exclude color) of the auxiliary attributes of a color</a>.<br />Because of the PoCo.app is use either Use or Not-Use, each element have either 0 or 1.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>Mask<br /><span class="small">Private chunk</span></th>
+<td>Store <a href="./man-022.html">the 
+mask(prohibit overriding) of the auxiliary attributes of a color</a>.<br />Because of the PoCo.app is use either Allow or Disallow, each element have either 0 or 1.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>IDAT</th>
+<th>Image Data</th>
+<td>Store image within the selection shape.<br />Applied filter is only 0(none filter) in order to reduse the complexity of implementation.</td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>Image Trailer</th>
+<td>The end of the PNG data-stream within the pasteboard.</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-050.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-052.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

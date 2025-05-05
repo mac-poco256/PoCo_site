@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::File Operate</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-049.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>Read from File</h3>
+<div class="indfirst_1_em">
+<p>The PoCo.app only support that extension word has &quot;.poco&quot;.</p>
+<p>And, the PoCo.app assume that reaing file is stored by the PoCo.app.</p>
+<p><br /></p>
+<p>The PoCo.app can obtain data-stream which are folloing:</p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>Image Header</th>
+<td>The color type must be specified 3(indexed color), and non-interlace must be specified.<br />Image size(width and height) obtain from this chunk.</td>
+</tr>
+
+<tr>
+<th>iCCP</th>
+<th>Embedded ICC Profile</th>
+<td>The information of color space is the ICC profile.<br />That is, the use of ICC profile is specified(checked) on the <a href="./man-015.html#doc_setup">document setting</a>.<br />Note that the PoCo.app does not use ICC profile information, so any data in the iCCP chunk would be ignored.</td>
+</tr>
+
+<tr>
+<th>sRGB</th>
+<th>Standard RGB Color Space</th>
+<td>The information of color space is NOT the ICC profile.<br />That is, the use of ICC profile is not specified(unchecked) on the <a href="./man-015.html#doc_setup">document setting</a>, which specified value is retained as SRGB value.</td>
+</tr>
+
+<tr>
+<th>gAMA</th>
+<th>Image Gamma</th>
+<td>Stored value is retained as gamma value on the <a href="./man-015.html#doc_setup">document setting</a>.</td>
+</tr>
+
+<tr>
+<th>cHRM</th>
+<th>Primary Chromaticities and White Point</th>
+<td>Stored values are retained as chromaticity settings on the <a href="./man-015.html#doc_setup">document setting</a>.</td>
+</tr>
+
+<tr>
+<th>pHYs</th>
+<th>Physical Pixel Dimensions</th>
+<td>Stored value is treated as resolution(DPI).</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>Palette</th>
+<td>Stored values are obtained from first to last one by one.<br />When there are less than 256 colors, obtaining is so far.(colors of absent are default color within the PoCo.app.)</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>Transparency</th>
+<td>Stored values are obtained for which each color have <a href="./man-022.html">the tranparency of the auxiliary attributes of a color</a>.<br />A value interprets 0 as transparency, a value interprets 255 as opaqueness. Intermediate values are interpreted as opaqueness except that that values are stored to R, G, and B if a corresponding color is non-colored.(that is, tRNS chunk interpretation when <a href="./man-004.html#gray_to_alpha">grayscale treat as transparent</a> on the preferences panel is specified.)<br />If the number of element is less than 256, obtaining is so far.(by default, that colors are opaqueness.)</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>Not use<br /><span class="small">Private chunk</span></th>
+<td>Stored values are obtained for which each color have <a href="./man-022.html">the not-use(exclude color) of the auxiliary attributes of a color</a>.</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>Mask<br /><span class="small">Private chunk</span></th>
+<td>Stored values are obtained for which each color have <a href="./man-022.html">the mask(prohibit overriding) of the auxiliary attributes of a color</a>.</td>
+</tr>
+
+<tr>
+<th>bKGD</th>
+<th>Background Color</th>
+<td>Stored value is retained as the background color on the <a href="./man-015.html#doc_setup">document setting</a>.</td>
+</tr>
+
+<tr>
+<th>cpAT</th>
+<th>Color Pattern<br /><span class="small">Private chunk</span></th>
+<td>A stored data is treated as the color pattern.<br />The data-stream must be contain width, and followed by height, and followed by pattern(image) which is compressed by zlib deflate.<br />If the number of the cpAT chunk is greater than 16, that chunks are ignored.</td>
+</tr>
+
+<tr>
+<th>ilAY</th>
+<th>Image Layer<br /><span class="small">Private Chunk</span></th>
+<td>A stored data is treated as the image layer. The data-stream start visible attribute, followed by editable attribute, followed by name(null-terminate), followed by width, followed by height, and followed by image which is compressed by zlib deflate.</td>
+</tr>
+
+<!--
+<tr>
+<th>slAY</th>
+<th>Text Layer<br /><span class="small">Private Chunk</span></th>
+<td>Because of the text later is not defined, this chunk do not contain meaningful data.</td>
+</tr>
+-->
+
+<tr>
+<th>IDAT</th>
+<th>Image Data</th>
+<td>When a file is stored by the PoCo.app, this chunk is ignored.<br />Except that on the condition that <a href="./man-050.html">read the normally PNG file</a> is corresponded, the IDAT chunk is treated as single image layer.</td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>Image Trailer</th>
+<td>The end of the PNG data-stream. The PoCo.app does not read beyond datas.</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-048.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-050.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

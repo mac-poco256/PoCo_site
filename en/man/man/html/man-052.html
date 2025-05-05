@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::PasteBoard Operate</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-052.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>Paste from PasteBord</h3>
+<div class="indfirst_1_em">
+<p>The PoCo.app allow to paste from the pasteboard when there is data with the NSPNGPboardType on the pasteboard.</p>
+<p>In addition, the PoCo.app also obtain chunks that are private chunks.</p>
+<p><br /></p>
+<p>The PoCo.app supporting for the type of chunk are following:</p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>Image Header</th>
+<td>The color type must be specified 3(indexed color), and non-interlace must be specified.<br />Image size(width and height) obtain from this chunk.</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>Palette</th>
+<td>Stored values are obtained from first to last one by one.<br />When there are less than 256 colors, obtaining is so far.(colors of absent are default color within the PoCo.app.)</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>Transparency</th>
+<td>Stored values are obtained for which each color have <a href="./man-022.html">the tranparency of the auxiliary attributes of a color</a>.<br />A value interprets 0 as transparency, a value interprets 255 as opaqueness. Intermediate values are interpreted as opaqueness except that that values are stored to R, G, and B if a corresponding color is non-colored.(that is, tRNS chunk interpretation when <a href="./man-004.html#gray_to_alpha">grayscale treat as transparent</a> on the preferences panel is specified.)<br />If the number of element is less than 256, obtaining is so far.(by default, that colors are opaqueness.)</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>Not use<br /><span class="small">Private chunk</span></th>
+<td>Stored values are obtained for which each color have <a href="./man-022.html">the not-use(exclude color) of the auxiliary attributes of a color</a>.</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>Mask<br /><span class="small">Private chunk</span></th>
+<td>Stored values are obtained for which each color have <a href="./man-022.html">the mask(prohibit overriding) of the auxiliary attributes of a color</a>.</td>
+</tr>
+
+<tr>
+<th>IDAT</th>
+<th>Image Data</th>
+<td>This chunk is used as the pasted image.</td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>Image Trailer</th>
+<td>The end of the PNG data-stream within the pasteboard. The PoCo.app does not read beyond datas.</td>
+
+</table>
+<p><br /></p>
+
+<h4 id="imp_palette">Import Palette</h4>
+<div class="indfirst_1_em">
+<p>As mentioned to <a href="./man-051.html">copy to the pasteboard</a>, the auxiliary attributes of a color are also pasted when the data of pasteboard is stored(copied) by the PoCo.app themself.</p>
+<p>Hence, when pasting, that private chunks are imported.</p>
+</div>
+<div class="qc">
+<p><img src="../../../../man/man/image/image-191.png" alt="import palette" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>A part of list appear like float that are the meaning of &quot;target&quot;</p>
+<p>When palette is imported, the element of a color and the auxiliary attributes of a color are overrided by imported palette contain data.</p>
+</p>
+</div>
+<ul class="indhead_2_em">
+<li>Differ<br />If there is difference between the current image(document) and the pasteboard, corresponding color(s) are selected</li>
+<li>Invert<br />The selection state of all the colors are inverted.</li>
+<li>All<br />All the colors are selected.</li>
+<li>Clear<br />All the colors are non-selected.</li>
+</ul>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-051.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

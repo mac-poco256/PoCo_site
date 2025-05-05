@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Update Logs::from 1.100 to 1.200</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/diff/html/diff-002.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>The difference between versions 1.100(1.1.0) and 1.200(1.2.0)</h3>
+<div class="indfirst_1_em">
+<p>In be up-to-date version 1.200(1.2.0), the difference between versions 1.100(1.1.0) and 1.200(1.2.0) are listed here.</p>
+</div>
+<p><br /></p>
+
+<h4 id="addition">Add</h4>
+<div class="indfirst_1_em">
+<p>Added functions are following:</p>
+</div>
+<ul>
+<li>Added a funcntion that <a href="../../man/html/man-004.html#preview">specifies size</a> of layer preview.<br />In addition, the Layer window had been removed an limitation that restrict size step to particular value.<span class="small">(formerly, size step was particular value rather than any value.)</span></li>
+<li>In <a href="../../man/html/man-040.html#color_replace">the Replace Color setting panel</a>, a function of the number of color range is added.</li>
+<li>Added a function that <a href="../../man/html/man-004.html#gray_to_alpha">store grascale(no-chroma color) treated as transparency into file</a>.</li>
+<li>In <a href="../../man/html/man-040.html#auto_gradation">the automatic gradient with tile-pattern</a>, added a fnunction that each adjacent color specifies depth of boundary when specifing Adjacent. By default, that depths are depended on the number of pixels within selection area.</li>
+<li>In <a href="../../man/html/man-040.html#paint_select">the selection with painting</a>, added a function that specifies the border color.</li>
+<li>In <a href="../../man/html/man-007.html"the detail of color setting sheet</a>, specifying CMYK mode is added.<br />Please note that, the way of making of color is only added, the color space is always RGB.</li>
+<li>Added a function that perform a New Tab function, which create new document(image) with same size as current document.(this behavior is supported by macOS 10.12+.)</li>
+</ul>
+<p><br /></p>
+
+<h4 id="replace_correct">Replace, Fix, Correct</h4>
+<div class="indfirst_1_em">
+<p>Replaced, Fixed, or Corrected functions are following:</p>
+</div>
+<ul>
+<li>When drawing gradient with color mixing, a start of tint is flipped corresponding with <a href="../../man/html/man-043.html">the flip pattern</a>.</li>
+<li>A Default value of the automatic gradient is replaced, which is based upon pixels within selection area.<span class="small">(formerly, default is based upon palette setting, which does not depend selection area.)</span></li>
+<li>Fixed an issue that <a href="../../man/html/man-014.html">erase</a> could not be affected when the top color of palette is masked(prohibit override).</li>
+</ul>
+<p><br /></p>
+
+<h4 id="delete_deprecate">Delete, Deprecate</h4>
+<div class="indfirst_1_em">
+<p>Deleted, or Deprecated functions are none.</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="../diff-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

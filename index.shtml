@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="PoCo.app は Mac 用（Mac OS X、OS X、macOS）のグラフィックツールで、256色の画像を扱うことに特化しています。256色ではあるものの、いわゆるドット絵というより、より広大な画像を編集することを目標としています。" />
+<meta name="keywords" content="PoCo,pixeleditor,doteditor,8bit,256color,mac,free,8ビット,256色,フリー,ドット絵" />
+<title>PoCo</title>
+<link rel="stylesheet" href="./styles/reset.css" />
+<link rel="stylesheet" href="./styles/styles.css" />
+<link rel="stylesheet" href="./styles/colors.css" />
+</head>
+<body class="title">
+<div class="centering">
+<div class="qr">
+<p><a href="./en/index.shtml"><span class="small maincolor underline">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<!-- cover illust -->
+<div class="left">
+<a class="twitter-timeline" data-lang="ja" data-width="300" data-height="350" data-link-color="#ef9fb3" href="https://twitter.com/mac_poco256?ref_src=twsrc%5Etfw">Tweets by mac_poco256</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<!-- table of contents -->
+<div class="right">
+
+<div class="qr">
+<p><img src="./parts/logo.png" alt="PoCo logo" /></p>
+</div>
+
+<div class="maincolor" style="padding-left: 10px; width: 310px;">
+<p>PoCo.app は Mac 用（Mac OS X、OS X、macOS）のグラフィックツールで、256色の画像を扱うことに特化しています。</p>
+<p>256色ではあるものの、いわゆるドット絵というより、より広大な画像を編集することを目標としています。</p>
+<p><br /></p>
+</div>
+
+<a href="./about.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">がいよう</span></p>
+</div>
+</a>
+
+<a href="./download.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">はいふぶつ</span></p>
+</div>
+</a>
+
+<a href="./man/man.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">つかいかた</span></p>
+</div>
+</a>
+
+<a href="./history.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">りゃくれき</span></p>
+</div>
+</a>
+
+<a href="./misc.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">そのほか</span></p>
+</div>
+</a>
+
+</div>
+<hr class="sectionline" />
+
+<!-- memo/information -->
+<div class="floatleft maincolor">
+<p><!--#exec cgi="./cgi/txcount.cgi"--></p>
+</div>
+<div class="floatright qr maincolor">
+<p>last modify : 2020/04/13(Mon.)</p>
+<p>Version 1.4.0 公開</p>
+</div>
+</div>
+</body>
+</html>

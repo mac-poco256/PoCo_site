@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::Drawing Functions</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-040.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3><img src="../../../../man/man/image/image-049.png" alt="" />&nbsp;The Selection, within Selection</h3>
+<div class="indfirst_1_em">
+<p>When selected on an image, following functions are available:</p>
+</div>
+<ul class="indhead_2_em">
+<li>Copy, Paste and Delete.</li>
+<li>Copy and Move by dragged(within current image).</li>
+<li>Modify Size(increase and/or decrease).</li>
+<li>Rotate(any angle rotation).</li>
+<li>Flip(horizontal and/or vertical).</li>
+<li>Register Color Pattern.</li>
+<li>Automatic Gradient.</li>
+<li>Replace Color.</li>
+<li>Texuture.</li>
+<li>Clip Image.<li>
+</ul>
+<p><br /></p>
+
+<h4 id="area_type">The Shape of Selection: either the Rectangle or the FreeStyle</h4>
+<div class="indfirst_1_em">
+<p>When the <img src="../../../../man/man/image/image-196.png" alt="" /> (also, the <img src="../../../../man/man/image/image-194.png" alt="" />) button is shown, the spape of selection is rectangle(oblong or square).</p>
+<p>When the <img src="../../../../man/man/image/image-049.png" alt="" /> (also, the <img src="../../../../man/man/image/image-063.png" alt="" />) button is shown, the spape of selection is free style.</p>
+</div>
+<p><br /></p>
+
+<h4 id="paint_select">Selection with painting</h4>
+<div class="indfirst_1_em">
+<p>With the <span class="menu_item">⌘<span class="small">(command)</span></span> key, adjacent pixels to start point of which have same color as start point are target of selection shape.</p>
+<p>With the <span class="menu_item">⌘<span class="small">(command)</span></span> &amp; the <span class="menu_item">⇧<span class="small">(shift)</span></span> key, selection shape is increased.</p>
+<p>With the <span class="menu_item">⌘<span class="small">(command)</span></span> &amp; the <span class="menu_item">⌥<span class="small">(option)</span></span> key, contrast, selection shape is decreased.</p>
+<p><br /></p>
+<p>As well.</p>
+<p>With the <span class="menu_item">⌘<span class="small">(command)</span></span> &amp; the <span class="menu_item">⌃<span class="small">(control)</span></span> key, adjacent pixles are target of selection shape, with current color is border: be called the Selection shape with Border.</p> 
+<p>With the <span class="menu_item">⌘<span class="small">(command)</span></span> &amp; the <span class="menu_item">⌃<span class="small">(control)</span></span> &amp; the <span class="menu_item">⇧<span class="small">(shift)</span></span> key, selection shape with border is increaced.</p>
+<p>With the <span class="menu_item">⌘<span class="small">(command)</span></span> &amp; the <span class="menu_item">⌃<span class="small">(control)</span></span> &amp; the <span class="menu_item">⌥<span class="small">(option)</span></span> key, contrast, selection shape with border is decreased.</p>
+</div>
+<p><br /></p>
+
+<h4 id="area_edit">Editing with Selection: Move, Copy and Delete</h4>
+<div class="indfirst_1_em">
+<p>Within selection shape, a selected image is moved when the main button is dragged.</p>
+<p>With the <span class="menu_item">⌃<span class="small">(control)</span></span> key (or the sub buttom pressed), copy image when the main button is released.</p>
+<p>When <span class="menu_item">Edit &gt; Delete</span> menu select, an image within selection shape is drawn(painted) with current drawing function.(note that behavior of the Tint is same as the Uniformed Tint.)</p>
+</div>
+<p><br /></p>
+
+<h4 id="handle">Editing with the Handles: Rotation and Resize</h4>
+<div class="indfirst_1_em">
+<p>When the <img src="../../../../man/man/image/image-195.png" alt="" /> button is shown, the handle is not appear, which means that rotating and resizing are not avaiable.</p>
+<p>When the <img src="../../../../man/man/image/image-065.png" alt="" /> botton is shown, the handle is appear which rotating and resizing are available. At this time, each handle are assigned following functions:</p>
+</div>
+<ul class="indhead_2_em">
+<li>The Corner Handle is Resizing.</li>
+<li>The Side Handle is Rotating.</li>
+</ul>
+<p><br /></p>
+
+<h4 id="auto_gradation">The Automatic Gradient with tile-pattern(organized dither)</h4>
+<div class="indfirst_1_em">
+<p>The feature of the Automatic Gradient that between adjacent colors are interpolated by using the tile-pattern(organized dither).
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../../../../man/man/image/image-197.png" alt="automatic gradient" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>When <span class="menu_item">Edit &gt; Auto-Gradient</span> menu select, then open the Auto-Gradient setting panel.</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../../../../man/man/image/image-198.png" alt="automatic gradient setting panel" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>When the main button is clicked on a whole color listed area, then select a color of targtes.</p>
+<p>The slider that specify gradient depth(with), which value can be specified by 1 through 16 (in terms of Dot, 8 dots through 256).</p>
+<p>When the &quot;Manual&quot; is indicated, each boundary are drawn by specified slider value.</p>
+<p>When the &quot;Auto&quot; is indicated the slider is dislabled, which depth(width) of each boundary are depend on continuous dot length.</p>
+<p>When the &quot;Each&quot; is indicated, each depth(witdh) of boundary can be specified with each pair. And, maximum value(boundary depth(width)) is specified by the slider, each value is calculated that are depend on the count of pixels within selected shape. That values(each boundary depth(width)) can set/see on the Detail setting sheet that is opend by clicked the <span class="button_item">detail...</span> button.<p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../../../../man/man/image/image-200.png" alt="detail of automatic gradient setting sheet" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>When the &quot;Adjacent&quot; is checked, pair of exactly adjoining pixel value is targeted. So that, if colors of selected are discrete then automatic gradient can be doing.</p>
+<p>By default, following conditions satisfied colors is selected:</p>
+<ul class="indhead_2_em">
+<li>Within selection shape.</li>
+<li>No Mask<span class="small">(prohibit overriding)</span></li>
+<li>No Not use<span class="small">(exclude color)</span></li>
+<li>No Black<span class="small">(either Red, Green or Blue are not zero)</span></li>
+</ul>
+</div>
+<p><br /></p>
+
+<h4 id="color_replace">Replace Color</h4>
+<div class="indfirst_1_em">
+<p>Replace color value within selection shape by other color value.</p>
+<p>When <span class="menu_item">Edit &gt; Replace color</span> menu is selected, the Replace color setting panel open.</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../../../../man/man/image/image-199.png" alt="replace color panel" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>The main button is clicked that specifies source color and the sub button is clicked that specifies destination color, which regiser button is clicked that  pair of source-destination register a list of target colors.</p>
+<p>If want to specify continuous colors, can specify the value of range on edit box below the color list.</p>
+</div>
+<p><br /></p>
+
+<h4 id="texture">Texture</h4>
+<div class="indfirst_1_em">
+<p>Mix an image of current layer with an image of immediately below layer.</p>
+<p>The current layer represents a gradient, the immediately below layer represents a pattern.</p>
+<p>An image of result is store into the current layer.</p>
+<p>Following pictures explain before/after applying the texture.<span class="small">(when click image, show full-size.)</span></p>
+<div class="qc" style="padding-top: 0.5em;">
+<p><a href="../../../../man/man/image/image-201.png"><img src="../../../../man/man/image/image-201.jpg" alt="current layer" /></a></p>
+<p>&#xff0b;</p>
+<p><a href="../../../../man/man/image/image-202.png"><img src="../../../../man/man/image/image-202.jpg" alt="immediately below layer" /></a></p>
+<p>&#x2193;</p>
+<p><a href="../../../../man/man/image/image-203.png"><img src="../../../../man/man/image/image-203.jpg" alt="result" /></a></p>
+</div>
+<p>To apply the textture, the Texture setting panel open when <span class="menu_item">Edit &gt; Texture</span> menu is selected.</p>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../../../../man/man/image/image-204.png" alt="texture panel" /></p>
+</div>
+<p>The base colors specfies colors that pasting image use colors.(i.e. an image of immediately below layer uses colors.) To specify a range of color, input number on the Vert edit box.</p>
+<p>The gradient colors specfies colors that gradient image use colors.(i.e. an image of current layer uses colors.) To specify a range of color, input number on the Hori edit box.</p>
+<p>The replaced color specifies colors that uses by the result of mixing image.</p>
+</div>
+<p><br /></p>
+
+<h4 id="clip_image">Clip Image</h4>
+<div class="indfirst_1_em">
+<p>Using rectangle selection area, clip image.(Even if selection area is freestyle, clipping always use enclosed it rectangularly.)</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-039.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-041.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

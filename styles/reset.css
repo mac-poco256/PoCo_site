@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/*
+ * for CSS reset.
+ */
+html, body, div, p, span, h1, h2, h3, h4, h5, h6, table, tr, td, ol, ul, li, pre, form, input {
+    margin: 0;
+    padding: 0;
+    text-indent: 0em;
+    font-size: 100%;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 1.25em;
+    border: none;
+    vertical-align: baseline;
+}
+div, p, h1, h2, h3, h4, h5, h6 {
+    display: block;
+}
+span {
+    display: inline;
+}
+img {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ol {
+    display: block;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: decimal;
+    padding-left: 2em;
+}
+ul {
+    display: block;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+    padding-left: 2em;
+}
+li {
+    display: list-item;
+}
+pre {
+    display: block;
+    font-family: monospace;
+    font-size: 1em;
+    white-space: pre;
+}
+a {
+    display: inline;
+    text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #ffffff;
+}
+h1 {
+    font-size: 2.0em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.17em;
+}
+h4 {
+    font-size: 1.0em;
+}
+h5 {
+    font-size: 0.83em;
+}
+h6 {
+    font-size: 0.67em;
+}
+div > p {
+    text-indent: inherit;
+    font-weight: inherit;
+}
+td > p {
+    font-weight: inherit;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::描画機能</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-033.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3><img src="../image/image-042.png" alt="" />&nbsp;矩形枠</h3>
+<div class="indfirst_1_em">
+<p>矩形枠は、四角形の枠線を引く機能です。</p>
+<p>線を引くまでの流れは次の操作を行います。</p>
+</div>
+<ul class="indhead_2_em">
+<li>１回目の主ボタンクリックにより開始点を決めます。</li>
+<li>２回目以後の主ボタンクリックで次の点を決めます。<br /><span class="menu_item">⌘<span class="small">（command）</span></span>キーを押していると、回転角を決めるのための制御点の指定となります。<br /><span class="menu_item">⌘<span class="small">（command）</span></span>キーを押していない場合は、その時点の矩形を描画します。</li>
+</ul>
+<p><br /></p>
+
+<h4 id="boxframe_normal"><img src="../image/image-051.png" alt="" />&nbsp;通常</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>選択しているパターンを使用します。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>選択しているパターンを使用します。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>太さのスライダは使用しません。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>濃度のスライダは使用しません。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-132.png" alt="矩形枠 通常" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="boxframe_uniden"><img src="../image/image-052.png" alt="" />&nbsp;均一濃度</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>ペン形状パターンは使用せず、常に真円です。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>タイルパターンは使用しません。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>スライダで選択している値です。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>スライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-133.png" alt="矩形枠 均一濃度" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="boxframe_den"><img src="../image/image-053.png" alt="" />&nbsp;濃度</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>ペン形状パターンは使用せず、常に真円です。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>タイルパターンは使用しません。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>スライダで選択している値です。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>スライダで選択している値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-134.png" alt="矩形枠 濃度" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="boxframe_air"><img src="../image/image-054.png" alt="" />&nbsp;霧吹き</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>ペン形状パターンは使用せず、<a href="./man-045.html">霧吹き形状</a>で選択にした形状です。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>タイルパターンは使用しません。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>スライダで選択している値の８倍の太さとします。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>スライダで選択している値を点の描画頻度とします。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-135.png" alt="矩形枠 霧吹き" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="boxframe_grad"><img src="../image/image-055.png" alt="" />&nbsp;グラデーション</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>ペン形状パターンは使用せず、<a href="./man-045.html">霧吹き形状</a>で選択にした形状です。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>タイルパターンは使用しません。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>スライダで選択している値の８倍の太さとします。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>スライダで選択している値を点の描画頻度とします。<br />また、同値を混ぜ合わせ濃さとして色混合を行います。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-136.png" alt="矩形枠 グラデーション" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="boxframe_rand"><img src="../image/image-056.png" alt="" />&nbsp;拡散</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>ペン形状パターンは使用せず、常に真円です。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>選択しているパターンを使用します。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>スライダで選択している値の８倍の太さとします。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>スライダで選択している値を点の移動頻度とします。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-137.png" alt="矩形枠 拡散" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<h4 id="boxframe_water"><img src="../image/image-057.png" alt="" />&nbsp;ぼかし</h4>
+<table>
+
+<colgroup>
+<col style="width: 8.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th>ペン形状</th>
+<td>ペン形状パターンは使用せず、常に真円です。</td>
+</tr>
+
+<tr>
+<th>タイルパターン</th>
+<td>タイルパターンは使用しません。</td>
+</tr>
+
+<tr>
+<th>太さ</th>
+<td>スライダで選択している値です。</td>
+</tr>
+
+<tr>
+<th>濃度</th>
+<td>濃度のスライダは使用しません。</td>
+</tr>
+
+</table>
+
+<div class="qc">
+<p><img src="../image/image-138.png" alt="矩形枠 ぼかし" /></p>
+<p>例図</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-032.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-034.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

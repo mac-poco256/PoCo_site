@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::はいふぶつ::更新（1.000 から 1.100）</title>
+<link rel="stylesheet" href="../styles/reset.css" />
+<link rel="stylesheet" href="../styles/styles.css" />
+<link rel="stylesheet" href="../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<hr class="sectionline" />
+
+<h3>1.000 から 1.100 への更新にあたって</h3>
+<div class="indfirst_1_em">
+<p>補足的な情報（ウィンドウ位置や環境設定の内容など）についてを保存する名称（Bundle Identifier）を変更しました。</p>
+<p>そのため、Version 1.100 へ更新してもそれら情報を引き継げません。</p>
+<p>必要であれば、ターミナル（Terminal.app）で次のコマンドを実行して UserDefaults の引き継ぎを行ってください。</p>
+</div>
+<div class="terminal">
+<p>defaults export jp.harukago.poco jp.harukago.poco.plist</p>
+<p>defaults import org.poco256.PoCo jp.harukago.poco.plist</p>
+<p>defaults delete jp.harukago.poco<p>
+<p>rm jp.harukago.poco.plist</p>
+</div>
+<div class="small">
+<p>行っている内容は「古い分をファイルに出して」「そのファイルを新しい分に登録して」「古い分を消して」「ファイルに出した分も消す」ということです。</p>
+</div>
+<p><br /></p>
+<div class="indfirst_1_em">
+<p>また、レイヤーウィンドウの大きさが変更となりましたので、ターミナル（Terminal.app）で次のコマンドを実行して UserDefaults から値を削除してください。</p>
+</div>
+<div class="terminal">
+<p>defaults delete org.poco256.PoCo "NSWindow Frame LayerWindowPos"</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="../download.html"><img class="back" src="../parts/back.png" alt="Back" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

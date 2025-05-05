@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::へんこうてん::1.100 から 1.200</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/diff/html/diff-002.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>Version 1.100(1.1.0) から Version 1.200(1.2.0) の変更点</h3>
+<div class="indfirst_1_em">
+<p>Version 1.100(1.1.0) から Version 1.200(1.2.0) へ更新するにあたり、変更となった内容についてまとめています。</p>
+</div>
+<p><br /></p>
+
+<h4 id="addition">追加</h4>
+<div class="indfirst_1_em">
+<p>新規に追加した機能は次のとおりです。</p>
+</div>
+<ul>
+<li>レイヤープレビューの<a href="../../man/html/man-004.html#preview">大きさを設定する機能</a>を追加しました。<br />この機能追加に伴い、レイヤーウィンドウの高さを変更する際に課していた制限を撤廃しました<span class="small">（一定の刻みでしか変形できないようにしていましたが、任意の大きさを可能としました）。</span></li>
+<li><a href="../../man/html/man-040.html#color_replace">色置換</a>で色の選択範囲（選択数）を指定する機能を追加しました。</li>
+<li><a href="../../man/html/man-004.html#gray_to_alpha">彩度無しを透明度に読み替えて保存する機能</a>を追加しました。</li>
+<li><a href="../../man/html/man-040.html#auto_gradation">自動グラデーション</a>で隣接を指定している場合には、個別の色の組み合わせごとにサイズを指定する機能を追加しました。<br />また、このサイズはその色の画素数の総和に応じた値を初期値として割り振ります。</li>
+<li>塗り選択の機能に<a href="../../man/html/man-040.html#paint_select">境界色を指定した選択をする機能</a>を追加しました。</li>
+<li><a href="../../man/html/man-007.html">色設定シート</a>に CMYK モードを追加しました。<br />ただし、これは色の選択方法に CMYK を追加したのみであり、色空間は従来どおりに RGB です。</li>
+<li>新しいタブを追加する際の動作を追加しました。編集中の画像と同じサイズの新規ドキュメント（新規画像）を作成します（この動作は macOS 10.12 Sierra 以降でのみ作用します）。</li>
+</ul>
+<p><br /></p>
+
+<h4 id="replace_correct">変更（訂正）</h4>
+<div class="indfirst_1_em">
+<p>変更、ないし訂正した機能は次のとおりです。</p>
+</div>
+<ul>
+<li>色混合を用いた塗りつぶしでグラデーションをかける場合、<a href="../../man/html/man-043.html">パターンの反転</a>の指定に合わせて濃度の始点を入れ替えるように変更しました。</li>
+<li><a href="../../man/html/man-040.html#auto_gradation">自動グラデーション</a>の色選択の初期値は、選択範囲内にある色に基づくように変更しました<span class="small">（従来は選択範囲内の色には依らずに、パレットの設定にのみ依存した初期値としていました）</span>。</li>
+<li><a href="../../man/html/man-014.html">消去</a>を行う際、パレット先頭の色がマスク（上塗り禁止）だと消去が実行できない不具合を修正しました。</li>
+</ul>
+<p><br /></p>
+
+<h4 id="delete_deprecate">削除（廃止）</h4>
+<div class="indfirst_1_em">
+<p>削除、ないし廃止の機能はありません。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="../diff-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

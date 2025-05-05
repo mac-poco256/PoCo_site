@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::ファイルの扱い</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-048.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>保存</h3>
+<div class="indfirst_1_em">
+<p>本ツールでファイルに保存する際のファイルフォーマットは PNG です。</p>
+<p>ただし、独自 CHUNK を用いていることもあり、本ツール以外との衝突を回避する目的で拡張子は .poco としています<span class="small">（.png だと本ツール以外で不意にファイルを開くことが予想され、気づかずに上書き保存すると不幸にも独自 CHUNK が消える可能性があり、そう言った事故を避けることが目的です）</span>。</p>
+<p><br /></p>
+<p>本ツールでファイルに書き出す（保存する）内容は次の CHUNK を用います<span class="small">（順番は記述の順序のとおりです）</span>。</p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>名称</th>
+<th>役割</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>ヘッダ</th>
+<td>本ツールは２５６色の画像のみ扱うため、カラータイプは３（index color）固定です。<br />また、常にインターレース無しです。</td>
+</tr>
+
+<tr>
+<th>iCCP</th>
+<th>ICC プロファイル</th>
+<td>ICC プロファイルを記述します。<br />NSScreen から得られる内容をそのまま埋め込みます。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込む場合（チェック済みの場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>sRGB</th>
+<th>SRGB</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>の SRGB で指定する値をそのまま SRGB の値として記述します。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込まない場合（チェックしていない場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>gAMA</th>
+<th>ガンマ値</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>のガンマ値で指定する値をそのままガンマ値として記述します。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込まない場合（チェックしていない場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>cHRM</th>
+<th>色温度</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>の色温度で指定する各値をそのまま色温度として記述します。<br /><a href="./man-015.html#doc_setup">画像情報</a>で色空間として ICC プロファイルを埋め込まない場合（チェックしていない場合）にこの CHUNK を用います。</td>
+</tr>
+
+<tr>
+<th>pHYs</th>
+<th>物理スケール</th>
+<td>画像解像度（dpi）を記述します。</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>パレット</th>
+<td>ＲＧＢの色要素でパレットを記述します。<br />本ツールは常に２５６色分の定義を記述します。</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>透明</th>
+<td><a href="./man-022.html">色補助属性の透明</a>を記述します。<br />本ツールでは、透明か不透明かの２段階で画像を編集するため、この CHUNK の値は０あるいは２５５となります。<br />ただし、環境設定で<a href="./man-004.html#gray_to_alpha">彩度無しを透明度にして保存</a>を指定している場合はその限りではありません。<br />本ツールでは常に２５６色分の定義を記述します。</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>非使用<br /><span class="small">独自 CHUNK</span></th>
+<td><a href="./man-022.html">色補助属性の非使用（吸い取りを禁止）</a>を記述します。<br />本ツールでは可・不可の２値ですので、値は０か１となります。また、２５６色分をそのまま羅列して記述します。</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>マスク<br /><span class="small">独自 CHUNK</span></th>
+<td><a href="./man-022.html">色補助属性のマスク（上塗りを禁止）</a>を記述します。<br />本ツールでは可・不可の２値ですので、値は０か１となります。また、２５６色分をそのまま羅列して記述します。</td>
+</tr>
+
+<tr>
+<th>bKGD</th>
+<th>背景色</th>
+<td><a href="./man-015.html#doc_setup">画像情報</a>で背景を指定いる場合（チェック済みの場合）に、背景で指定する値をそのまま背景色として記述します。</td>
+</tr>
+
+<tr>
+<th>cpAT</th>
+<th>カラーパターン<br /><span class="small">独自 CHUNK</span></th>
+<td>カラーパターンを登録している場合に、そのパターン（画像）を記述します。<br />CHUNK の内容は、幅・高さ・パターン（画像）の順番に記述し、パターン（画像）に対してのみ zlib deflate で圧縮して得られたバイト列を記述します。<br />この CHUNK １つがパターン１つに対応し、本ツールでカラーパターンは１６個のため、この CHUNK を常に１６個記述します。</td>
+</tr>
+
+<tr>
+<th>ilAY</th>
+<th>画像レイヤー<br /><span class="small">独自 CHUNK</span></th>
+<td>画像の各レイヤーを記述します。<br />CHUNK の内容は表示可否・編集可否・レイヤー名称（null 終端）・幅・高さ・画像の順番に記述し、画像に対してのみ zlib deflate で圧縮して得られたバイト列を記述します。<br />この CHUNK １つが１レイヤーに対応し、レイヤーの層の数だけこの CHUNK を記述します。また、最初にあるこの CHUNK が最下層のレイヤーとなり、順に上層のレイヤーが並びます（最後にあるこの CHUNK が最上層のレイヤーとなります）。</td>
+</tr>
+
+<!--
+<tr>
+<th>slAY</th>
+<th>文字列レイヤー<br /><span class="small">独自 CHUNK</span></th>
+<td>文字列レイヤーについての仕様は未定義のためこの CHUNK による有為な内容を記述することはありません。</td>
+</tr>
+-->
+
+<tr>
+<th>IDAT</th>
+<th>画像</th>
+<td>表示しているレイヤーを統合した画像を格納します。<br />保存時のフィルタ処理についてあまり複雑な実装はしておらず、常に none filter のみを使用します<span class="small">（そのため、画像配布時は pngcrush や optipng などの外部ツールを用いて、最適化をかけることを推奨します）</span>。</td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>終端</th>
+<td>ファイル終端です。</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<div class="indfirst_1_em">
+<p>前述のとおりファイルフォーマット自体は PNG であり、且つ必須の CHUNK（IHDR、IDAT、IEND）と PLTE を常に含みます。</p>
+<p>そのため、本ツール以外と編集を連携したい場合は、それら他のツールで読み込む際に拡張子を .png にリネームする、あるいは PNG 形式として .poco を開くと言ったことを行ってください。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-047.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-049.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

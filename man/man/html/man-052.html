@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::クリップボード</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-051.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>ペースト</h3>
+<div class="indfirst_1_em">
+<p>本ツールでは、クリップボードに NSPNGPboardType があればペースト可能とします。</p>
+<p>また、本ツールによる独自 CHUNK がある場合はそれらの内容も取り込みます。</p>
+<p><br /></p>
+<p>本ツールでペースト時に取り込む CHUNK は次のものです。</p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>名称</th>
+<th>役割</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>ヘッダ</th>
+<td>カラータイプは３（index color）で、インターレース無しでなければなりません。<br />ペーストする画像サイズはこの CHUNK に記述している値を用います。</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>パレット</th>
+<td>記述している値は先頭から順に各色に対する色要素として用います。<br />２５６色分に足りない場合はそこまでの値を取得します（足りない分は本ツールの初期値があたります）。</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>透明</th>
+<td>記述している値は先頭から順に各色に対する<a href="./man-022.html">色補助属性の透明</a>として用います。<br />０であれば透明、２５５であれば不透明と解釈します。中間値の場合も不透明として扱いますが、彩度がない（RGB の各値が同じ）場合はその値を明るさとみなして、RGB の各値に読み替えます（このことが、<a href="./man-004.html#gray_to_alpha">彩度無しを透明度にして保存</a>している場合の tRNS CHUNK の解釈ということになります）。<br />２５６色分に足りない場合はそこまでの値を取得します（足りない分は不透明があたります）。</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>非使用<br /><span class="small">独自 CHUNK</span></th>
+<td>記述している値は先頭から順に各色に対する<a href="./man-022.html">色補助属性の非禁止（吸い取りを禁止）</a>として用います。</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>マスク<br /><span class="small">独自 CHUNK</span></th>
+<td>記述している値は先頭から順に各色に対する<a href="./man-022.html">色補助属性のマスク（上塗りを禁止）</a>として用います。</td>
+</tr>
+
+<tr>
+<th>IDAT</th>
+<th>画像</th>
+<td>ペーストする画像としてこの CHUNK の内容を用います。</td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>終端</th>
+<td>クリップボードからペーストするデータ列の終端です。ここから先の内容は読み込みません。</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<h4 id="imp_palette">パレット取り込み</h4>
+<div class="indfirst_1_em">
+<p>本ツールによってコピーした場合は、<a href="./man-051.html">コピー</a>にあげた表のとおりに<a href="./man-022.html">色補助属性</a>の CHUNK も伴った内容がクリップボードに登録されています。</p>
+<p>このとき、ペーストするとパレットの取り込みを行います。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-191.png" alt="パレット取り込み" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>浮き出したような表示になっている場合に、その色を取り込みます。</p>
+<p>パレット取り込みを行うと、色要素・色補助属性を取り込んだ内容で上書きします。</p>
+</div>
+<ul class="indhead_2_em">
+<li>差分<br />編集中の画像とクリップボードの画像がそれぞれ持つパレットの内容に差がある分を自動的に選択状態とします。</li>
+<li>反転<br />現在の選択状態を反転します。</li>
+<li>すべて<br />すべての色を選択状態にします。</li>
+<li>解除<br />すべての色を非選択状態にします。</li>
+</ul>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-051.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

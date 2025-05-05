@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::パレットの管理</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-023.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>色混合</h3>
+<div class="indfirst_1_em">
+<p>本ツールの特徴的な面として、２５６色なツールでありながら色の混ぜ合わせ（色混合）があります。</p>
+<p>色混合とは、純粋な白（#ffffff）と純粋な黒（#000000）を混ぜると、その中間として灰色（#7f7f7f）が得られるという機能です。</p>
+<p>また、灰色と白、灰色と黒を混ぜることもでき、段階を持った混ぜ合わせ（すなわちグラデーション）も可能です。</p>
+<p>そのため、２５６色なツールでありながら筆圧や太さに応じて、点の中心から外側にかけて色が淡くなる筆ペンのような描画が可能となっています。</p>
+</div>
+<div class="small textred">
+<p>ただし、２５６色のパレットを持つという制限の下です。</p>
+<p>たとえ混ぜ合わせた結果として #7f7f7f という値が得られたとしても、パレットにその色が無ければ、近似の別の色を使うことになってしまいます。</p>
+</div>
+<p><br /></p>
+
+<h4 id="colmix_rgb">RGB 色演算</h4>
+<div class="indfirst_1_em">
+<p>パレットウィンドウの<a href="./man-007.html#palwin_colmix">色混合</a>を RGB にしている場合、色成分は赤（R）・緑（G）・青（B）での混合（演算）を行います。</p>
+<p>赤は赤どおし、緑は緑どおし、青は青どおし、とそれぞれの成分ごとでのみ値を演算します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="colmix_hls">HLS 色演算</h4>
+<div class="indfirst_1_em">
+<p>パレットウィンドウの<a href="./man-007.html#palwin_colmix">色混合</a>を HLS にしている場合、色成分は色相（H）・明度（L）・彩度（S）での混合（演算）を行います。</p>
+<p>色相は色相環を意識し、明度は明度どおし、彩度は彩度どおしでの演算を行います。</p>
+<p>そのため、RGB 色演算では行えない「赤と緑を足したら黄色になる」という光三原色に基づいた色演算が行えます。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-022.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-024.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

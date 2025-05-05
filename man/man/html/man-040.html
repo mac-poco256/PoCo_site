@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::描画機能</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-040.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3><img src="../image/image-049.png" alt="" />&nbsp;範囲選択</h3>
+<div class="indfirst_1_em">
+<p>範囲選択を行うことにより、次の編集が行えるようになります。</p>
+</div>
+<ul class="indhead_2_em">
+<li>コピー、ペースト、削除</li>
+<li>（同一画像内での）ドラッグによる移動、複写</li>
+<li>変倍（拡大、縮小）</li>
+<li>回転（任意角回転）</li>
+<li>上下反転、左右反転</li>
+<li>カラーパターンの登録</li>
+<li>自動グラデーション</li>
+<li>色置換</li>
+<li>テクスチャ</li>
+<li>切り抜き</li>
+</ul>
+<p><br /></p>
+
+<h4 id="area_type">任意領域と矩形領域</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-196.png" alt="" />（<img src="../image/image-194.png" alt="" />）の場合、形状は矩形（長方形ないし正方形）で範囲選択できます。</p>
+<p><img src="../image/image-049.png" alt="" />（<img src="../image/image-063.png" alt="" />）の場合、形状は任意で範囲選択できます。</p>
+</div>
+<p><br /></p>
+
+<h4 id="paint_select">塗り選択</h4>
+<div class="indfirst_1_em">
+<p><span class="menu_item">⌘<span class="small">（command）</span></span>キーを押していると、主ボタンプレスした座標と同じ色であり、隣り合う画素を選択範囲とします。</p>
+<p><span class="menu_item">⌘<span class="small">（command）</span></span>キーと<span class="menu_item">⇧<span class="small">（shift）</span></span>キーを押していると、塗りの選択範囲を拡張します。</p>
+<p><span class="menu_item">⌘<span class="small">（command）</span></span>キーと<span class="menu_item">⌥<span class="small">（option）</span></span>キーを押していると、塗りの選択範囲を削減します。</p>
+<p><br /></p>
+<p>また、<span class="menu_item">⌘<span class="small">（command）</span></span>キーと<span class="menu_item">⌃<span class="small">（control）</span></span>キーを押していると、選択色を境界色として、境界領域内の画素を選択範囲とします。</p>
+<p><span class="menu_item">⌘<span class="small">（command）</span></span>キーと<span class="menu_item">⌃<span class="small">（control）</span></span>キーと<span class="menu_item">⇧<span class="small">（shift）</span></span>キーを押していると、境界色を指定した塗りの選択範囲を拡張します。</p>
+<p><span class="menu_item">⌘<span class="small">（command）</span></span>キーと<span class="menu_item">⌃<span class="small">（control）</span></span>キーと<span class="menu_item">⌥<span class="small">（option）</span></span>キーを押していると、境界色を指定した塗りの選択範囲を削減します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="area_edit">移動と複写と削除</h4>
+<div class="indfirst_1_em">
+<p>選択範囲内で主ボタンをドラッグすると範囲内の画像を移動します。</p>
+<p>主ボタンをリリースする際に<span class="menu_item">⌃<span class="small">（control）</span></span>キーを押している<span class="small">（あるいは副ボタンを押している）</span>と複写となります。</p>
+<p>メニューの<span class="menu_item">編集 ＞ 削除</span>を選択すると、選択中の色（色ないしカラーパターン）とタイルパターン、および選択中の描画機能で範囲内を塗りつぶします（ただし、濃度と均一濃度は形状の塗りつぶしの場合と異なり、ともに同じ結果となります）。</p>
+</div>
+<p><br /></p>
+
+<h4 id="handle">ハンドルによる編集</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-195.png" alt="" />の場合、ハンドルは出現せず変倍・回転は行えません。</p>
+<p><img src="../image/image-065.png" alt="" />の場合、ハンドルは出現し変倍・回転を行えます。このとき、四隅と四辺のハンドルは次の機能が割り当てられています。</p>
+</div>
+<ul class="indhead_2_em">
+<li>四隅：変倍</li>
+<li>四辺：回転</li>
+</ul>
+<p><br /></p>
+
+<h4 id="auto_gradation">自動グラデーション</h4>
+<div class="indfirst_1_em">
+<p>自動グラデーションは、隣り合う２色の間の境界をタイルパターンによるグラデーションでぼかす（混ぜ合わせる）機能です。</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../image/image-197.png" alt="自動グラデーション" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>メニューの<span class="menu_item">編集 ＞ 自動グラデーション</span>を選択して自動グラデーション設定パネルを開きます。</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../image/image-198.png" alt="自動グラデーション設定パネル" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>色見本の部分を主ボタン（左ボタン）で選択して、対象となる色を選択します。</p>
+<p>スライダーはグラデーションの深さ（太さ）を選択するもので、１から１６までの１６段階が指定可能です（ドット数で表すと８ドットから１２８ドットです）。</p>
+<p>手動を選択している場合、スライダーで指定したサイズで描画します。</p>
+<p>自動を選択している場合、スライダーは使用不可の状態となり、対象となる色のドット数（水平あるいは垂直の連続数）で深さ（太さ）が自動で算出されます。</p>
+<p>個別を選択している場合、色の組み合わせごとにサイズの指定が可能となります。また、この個別サイズの初期値はスライダーで指定したサイズを最大値とし、且つ選択範囲内の対象色の画素数に応じて分配した値となります。この個別サイズは<span class="button_item">詳細...</span>をクリックすることにより開くシートにて、その設定値を確認・編集できます。<p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../image/image-200.png" alt="自動グラデーション個別詳細設定シート" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>隣接のチェックをチェック済みにすると、画素の値が隣接している場合に自動グラデーションをかけます。そのため、色見本での選択色が離散的だと、自動グラデーションは実行できません。</p>
+<p>色見本の選択の初期値は次の条件を満たす色としています。</p>
+<ul class="indhead_2_em">
+<li>選択範囲内にある色である。</li>
+<li>マスク<span class="small">（上塗りを禁止）</span>ではない。</li>
+<li>非使用<span class="small">（吸い取りを禁止）</span>でもない。</li>
+<li>色要素が黒<span class="small">（赤（R）と緑（G）と青（B）の値が０）</span>でもない。</li>
+</ul>
+</div>
+<p><br /></p>
+
+<h4 id="color_replace">色置換</h4>
+<div class="indfirst_1_em">
+<p>選択範囲内の画素を別の画素に置き換えます。</p>
+<p>メニューの<span class="menu_item">編集 ＞ 色置換</span>を選択して色置換設定パネルを開きます。</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../image/image-199.png" alt="色置換設定パネル" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>主ボタン（左ボタン）で置換元、副ボタン（右ボタン）で置換先を選択して登録し、色を複写します。</p>
+<p>隣接した色を連続して対象色とする場合は、その連続数をリスト下の範囲で指定します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="texture">テクスチャ</h4>
+<div class="indfirst_1_em">
+<p>現在のレイヤーと直下のレイヤーを混ぜ合わせます。</p>
+<p>現在のレイヤーは濃淡を表現し、直下のレイヤーは貼り付けるパターン（模様）を表現します。</p>
+<p>混ぜ合わせた結果は現在のレイヤーに反映します。</p>
+<p>図示すると次のようになります<span class="small">（画像をクリックすると拡大表示します）</span>。</p>
+<div class="qc" style="padding-top: 0.5em;">
+<p><a href="../image/image-201.png"><img src="../image/image-201.jpg" alt="現在のレイヤー" /></a></p>
+<p>＋</p>
+<p><a href="../image/image-202.png"><img src="../image/image-202.jpg" alt="直下のレイヤー" /></a></p>
+<p>↓</p>
+<p><a href="../image/image-203.png"><img src="../image/image-203.jpg" alt="適用後" /></a></p>
+</div>
+<p>実行するには、メニューの<span class="menu_item">編集 ＞ テクスチャ</span>を選択してテクスチャ設定パネルを開きます。</p>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../image/image-204.png" alt="テクスチャ設定パネル" /></p>
+</div>
+<p>テクスチャ基本色は、貼り付けるパターンで使用している色を指定します（直下のレイヤーで使用している色を指定します）。この色の範囲は垂直範囲のエディットボックスで指定できます。</p>
+<p>濃淡色は、濃淡で使用している色を指定します（現在のレイヤーで指定している色を指定します）。この色の範囲は水平範囲のエディットボックスで指定できます。</p>
+<p>置換色は、混ぜ合わせた結果で使用する色を指定します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="clip_image">切り抜き</h4>
+<div class="indfirst_1_em">
+<p>矩形の選択範囲で画像を切り抜きます（任意形状であったとしても、その形状を囲む矩形で切り抜きます）。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-039.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-041.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

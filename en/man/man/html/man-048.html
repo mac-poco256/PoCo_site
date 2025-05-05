@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::File Operate</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-048.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>Save to File</h3>
+<div class="indfirst_1_em">
+<p>The PoCo.app adopt the PNG specification as file format.</p>
+<p>Note that
+the file extension is <span class="bold">&quot;.poco&quot;</span> in order to avoid to collision with other application, because of private chunks are introduced.<span class="small">(Suppose that adopt &quot;.png&quot; as file extension, a file would be unexpected opened and override by other applications, and then that private chunks would be removed, probably. To avoid such accident, file extension is NOT &quot;.png&quot;.)</span>
+<p><br /></p>
+<p>In output, supporting chunks are following.<span class="small">output order also is following.)</span></p>
+</div>
+<table>
+
+<colgroup>
+<col style="width: 3.0em;" />
+<col style="width: 9.0em;" />
+<col />
+</colgroup>
+
+<tr>
+<th>CHUNK</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<th>IHDR</th>
+<th>Image Header</th>
+<td>Since the PoCo.app only support for 256 colos, the Color type of the IHDR is always 3(indexed color).<br />And, the PoCo.app only support for non-interlace.</td>
+</tr>
+
+<tr>
+<th>iCCP</th>
+<th>Embedded ICC Profile</th>
+<td>Store ICC Profile.<br />Storing data is intact that obtain from the NSScreen.<br />When the use of ICC profile is specified(checked) on the <a href="./man-015.html#doc_setup">document setting</a>, this chunk is used.</td>
+</tr>
+
+<tr>
+<th>sRGB</th>
+<th>Standard RGB Color Space</th>
+<td>Specified value on the <a href="./man-015.html#doc_setup">document setting</a> is stored as the SRGB value.<br />When the use of ICC profile is NOT specified(unchecked), this chunk is used.</td>
+</tr>
+
+<tr>
+<th>gAMA</th>
+<th>Image Gamma</th>
+<td>Specified on the <a href="./man-015.html#doc_setup">document setting</a> value is stored as the gamma value.<br />When the use of ICC profile is NOT specified(unchecked), this chunk is used.</td>
+</tr>
+
+<tr>
+<th>cHRM</th>
+<th>Primary Chromaticities and White Point</th>
+<td>Specified values on the <a href="./man-015.html#doc_setup">document setting</a> are stored as the chromaticity setting.<br />When the use of ICC profile is NOT specified(unchecked), this chunk is used.</td>
+</tr>
+
+<tr>
+<th>pHYs</th>
+<th>Physical Pixel Dimensions</th>
+<td>Store image resolution(Dot per Inch, DPI).</td>
+</tr>
+
+<tr>
+<th>PLTE</th>
+<th>Palette</th>
+<td>Store the R, G, and B element of each color.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>tRNS</th>
+<th>Transparency</th>
+<td>Store <a href="./man-022.html">the tranparency of the auxiliary attributes of a color</a>.<br />Because of the PoCo.app is use either Transparency or No-Transparentcy, each element have either 0 or 255.<br />However, when <a href="./man-004.html#gray_to_alpha">the grayscale treat as transparency</a> is specified on the preferences panel, do not follow that limitation.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>drOP</th>
+<th>Not use<br /><span class="small">Private chunk</span></th>
+<td>Store <a href="./man-022.html">the not-use(exclude color) of the auxiliary attributes of a color</a>.<br />Because of the PoCo.app is use either Use or Not-Use, each element have either 0 or 1.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>maSK</th>
+<th>Mask<br /><span class="small">Private chunk</span></th>
+<td>Store <a href="./man-022.html">the 
+mask(prohibit overriding) of the auxiliary attributes of a color</a>.<br />Because of the PoCo.app is use either Allow or Disallow, each element have either 0 or 1.<br />The PoCo.app always store 256 elements.</td>
+</tr>
+
+<tr>
+<th>bKGD</th>
+<th>Background Color</th>
+<td>Specified value on the <a href="./man-015.html#doc_setup">document setting</a> is stored as the specified background color
+ when the use of background color is specified(checked).</td>
+</tr>
+
+<tr>
+<th>cpAT</th>
+<th>Color Pattern<br /><span class="small">Private chunk</span></th>
+<td>When color patterns are resigtered, their pattern are stored.<br />A data-stream of this chunk that sequence is width, height, and pattern(image) which is compressed by zlib deflate.<br />A cpAT chunk represent a color pattern, the PoCo.app has 16 color patterns, so that there are always 16 elements within a file.</td>
+</tr>
+
+<tr>
+<th>ilAY</th>
+<th>Image Layer<br /><span class="small">Private Chunk</span></th>
+<td>
+Store each image layer.<br />A data-stream of this chunk that sequence is visible, editable, name(null-terminate), width, height, and image which is compressed by zlib deflate.<br />A ilAY chunk represent a image layer, a file contain this chunks of a number of layer. Most below(bottom) layer is stored at first, above layers are followed.(i.e. the last ilAY chunk is most above(top) layer.)</td>
+</tr>
+
+<!--
+<tr>
+<th>slAY</th>
+<th>Text Layer<br /><span class="small">Private Chunk</span></th>
+<td>Because of the text later is not defined, this chunk do not contain meaningful data.</td>
+</tr>
+-->
+
+<tr>
+<th>IDAT</th>
+<th>Image Data</th>
+<td>Store unified visible layer.<br />Applied filter is only 0(none filter) in order to reduse the complexity of implementation.<span class="small">(when distribute image, propose that should be optimized with other tools such as the pngcrush or optipng.)</span></td>
+</tr>
+
+<tr>
+<th>IEND</th>
+<th>Image Trailer</th>
+<td>The end of the PNG data-stream.</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<div class="indfirst_1_em">
+<p>As above mentioned, the PoCo.app adopt PNG as file format, so required chunks(IHDR, IDAT, and IDAT) and PLTE chunk always contain within a file.</p>
+<p>Hence, when would be want to be in alliance with other tools, be able to take ways that rename file extension(from .poco to .png) or open file as PNG format and so on.</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-047.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-049.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

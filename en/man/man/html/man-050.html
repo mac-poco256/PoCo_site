@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::File Operate</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-050.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>When read the normally PNG file</h3>
+<div class="indfirst_1_em">
+<p>As mentioned to <a href="./man-049.html">read from file</a>, the PoCo.app is assumed that a file is stored by the PoCo.app themself.</p>
+<p>However, that limitation is too the closing world, so the PoCo.app can read the normally PNG file when a file satisfy the condition.</p>
+<p>Please refer to the condition when be in alliance with other applications.</p>
+<p><br /></p>
+<p>A file must on the condition that following:</p>
+</div>
+<ul class="indhead_2_em">
+<li>The fundamental of file structure is documented in <a href="./man-049.html">read from file</a>.</li>
+<li>A file must not contain the ilAY chunk(the image layer).</li>
+<li>A file must contain within single IDAT chunk(the image data).(the separated IDAT chunk does not supported by the PoCo.app.)</li>
+</ul>
+<div class="indfirst_1_em">
+<p>Thus, when a file comprises of 256 colors and following PNG specification, file extension is renamed to &quot;.poco&quot;, the PoCo.app can read that file which is stored by other application.</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-049.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-051.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

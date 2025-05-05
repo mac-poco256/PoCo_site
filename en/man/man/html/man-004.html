@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::Usage::Start up</title>
+<link rel="stylesheet" href="../../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../../man/man/html/man-004.html"><span class="small maincolor">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>The Preferences Panel</h3>
+<div class="indfirst_1_em">
+<p>The perferences panel set auxiliary and/or modify to drawing functions.</p>
+<p>When such setttings want to set, select the <span class="menu_item">PoCo &gt; Preferences</span> menu in order to launch the Preferences panel.</p>
+</div>
+<div class="qc" style="padding-top: 0.5em;">
+<p><img src="../../../../man/man/image/image-008.png" alt="preferences panel" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>For each field below:</p>
+</div>
+<p><br /></p>
+
+<h4 id="enable_undo">Enable Undo</h4>
+<div class="indfirst_1_em">
+<p>This box specify either 'Enable' or 'Disable', for the Undo/Redo function.</p>
+<p>For this box defalut setting is 'Enable(check)'.</p>
+<p>The edit field neighbor on this box that field specify the number of undo/redo level.</p>
+<p>When specify 0 to that field, mean of infinity. That field default value is 100.</p>
+<p><span class="textred">Note that this setting take effect when the PoCo.app launch in the next time.</p>
+</div>
+<p><br /></p>
+
+<h4 id="enable_colorbuffer">Enable the Color buffer</h4>
+<div class="indfirst_1_em">
+<p>The color mixing that compute color element associate with colors.</o>
+<p>In this time, for each mixing compute that more cost occur(need so long time...). So, color mixing conditions are stored into memory(aka cache, called the Color buffer in this describe), such memory re-used in the next color mixing in order to above menthioned cost ommit.</p>
+<p>However, another cost occur that cost is more use of memory than no use the Color buffer). Therefore, when you do not have more space of memory, this function switch to 'Disable'.</p>
+<p>The default value of this box is 'Enable(check)'.</p>
+<p><span class="textred">Note that this setting take effect when the PoCo.app launch in the next time.</p>
+</div>
+<p><br /></p>
+
+<h4 id="save_docwindow">Record document window position</h4>
+<div class="indfirst_1_em">
+<p>To take same position when the PoCo.app launch in the next time, document window(i.e. main window) position record.</p>
+<p>The default value of this box is 'Disable(uncheck)'.</p>
+<p><span class="textred">Note that this setting take effect when the PoCo.app launch in the next time.</p>
+</div>
+<p><br /></p>
+
+<h4 id="window_pos">Fixed sub windows position</h4>
+<div class="indfirst_1_em">
+<p>To restrain sub windows moving, this box check off. Note merly be restrained moving, open/close and resize are not restrined.</p>
+<p>The default value of this box is 'Disable(uncheck)'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="enable_liveresize">Enable Live Resize</h4>
+<div class="indfirst_1_em">
+<p>The function of Live Resize that is always redraw follow to window resize with the Window Handle.</p>
+<p>This function only effect to resizing of main window.</p>
+<p>The default value of this box is 'Enable(check)'.</p>
+<div class="indhead_1_em small">
+<p>This function added within G3-PPC Mac that so slowly with live resize... Hence, needed in so long time ago...</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="enable_eraser">Enable Eraser</h4>
+<div class="indfirst_1_em">
+<p>Detect the eraser is enable when pen tablet is using.</p>
+<p>The default value of this box is 'Enable(check)'.</p>
+<div class="indhead_1_em small">
+<p>Note detect the eraser is depend on OS function.</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="invert_selection">Appare selection shape with Inverse</h4>
+<div class="indfirst_1_em">
+<p>Selection shape appare with inverse color(in 256 colors), when you use selection tool.</p>
+<p>The default value of this box is 'Disable(uncheck)'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="live_selection">Live Shaping</h4>
+<div class="indfirst_1_em">
+<p>The live shapeing is a way of depict of selection shape, always be shaping(and transforming) when move, copy, reisize or rotate are doing.</p>
+<p>When this function set to either enable or disable, this function have either advantage or disadvantage, that are following:</p>
+<ul class="indhead_1_em">
+<li>In 'Disable(uncheck)' case:<br />Only the frame of selection shape is transformed. Practical transform of image is occur after selection shape handling finished.<br />Processing is faster than 'Enable(check)'.</li>
+<li>In 'Enable(check)' case:<br />
+Always be shaping(transforming) whenever selection shape is handling. More precise result is taken than 'Disable(uncheck)', however response also is shomwhat slowly than 'Disable(uncheck)'.</li>
+</ul>
+<p>The default value of this box is 'Disable(uncheck)'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="show_scrollbar">Show Scrollbar</h4>
+<div class="indfirst_1_em">
+<p>This function select that how show scroll bar in main window and view window.</p>
+<p>Generally, show scrollbar setting is depend on <span class="menu_item">System Preferences &gt; General &gt; Show Scrollbar</span>. However, this function override such setting in the PoCo.app.</p>
+<ul class="indhead_1_em">
+<li>OS Setting<br />Depend on OS Setting, so that do not override.</li>
+<li>Always<br />Always show scroll bar, also override OS Setting.<span class="small">(This setting equivalent 'Always' in the System Preferences.)</span></li>
+<li>Discretion<br />Discretion show scroll bar, do not depend on OS Setting.<span class="small">(This setting equivalent 'When scrolling' in the System Preferences.)</span></li>
+</ul>
+<p>The default setting is 'OS Setting'.</p>
+<p><span class="textred">Note that this setting take effect when the PoCo.app launch in the next time.</p>
+</div>
+<p><br /></p>
+
+<h4 id="pixel_grid">Frequency of the Pixel grid</h4>
+<div class="indfirst_1_em">
+<p>This specify that how the pixel grid show.</p>
+<ul class="indhead_1_em">
+<li>When specify 0:<br />This mean that the pixel grid does not show.</li>
+<li>When specify 1:<br />This mean that always show solid line when need to show the pixel grid.</li>
+<li>More than 2:<br />This mean that show solid line in specified frequency(otherwise with dotted line) when need to show the pixel grid.</li>
+</ul>
+<p>The default setting is '0(the pixel grid dose not show)'.</p>
+<p>Note that the pixel grid is shown when view <span class="bold">magnify is more than 4</span> in <span class="bold">main window</span>.</p>
+</div>
+<p><br /></p>
+
+<h4 id="trans_grid">Show the Transparent grid</h4>
+<div class="indfirst_1_em">
+<p>When certain pixel is transparent in all layers, specify how show this pixel.</p>
+<p>When this box is check off, pattern is shown with mixed White-color and Specified-color.</p>
+<p>When this box uncheck, always show with Specified-color.</p>
+<p>The color is specified by RGB(Red, Green and Blue).</p>
+<p>The default setting is 'Show Grid(check)' and color specified #cccccc(R: 204, G: 204, B: 204).</p>
+</div>
+<p><br /></p>
+
+<h4 id="preview">Layer Preview</h4>
+<div class="indfirst_1_em">
+<p>The Quality specify that quality of preview image in the Layer window.<p>
+<p>This setting allow more than 0(include 0), default value is 4.</p>
+<p>When specify 1, this mean of most low-quality. Specify More than 1 then high-quality, however, so long time occur due to compute interpolation. So that, appropriate value must specify.</p>
+<p>And, the value of 0 have special mean that most high-quality. However, the mean of most high-quality is most cost occur(most slowly).</p>
+<p>The Size specify that size of preview image in the Layer window.</p>
+<p>This setting allow 24 through 255, default value is 48.</p>
+</div>
+<p><br /></p>
+
+<h4 id="gray_to_alpha">Grayscale treat as Transparent</h4>
+<div class="indfirst_1_em">
+<p>The 'Grayscale treat as Tranparency' that choose way in save to file with respect to no-chroma color.</p>
+<p>When this box is check off, no-chroma color store into the tRNS chunk exclude pure black(#000000) and pure white(#ffffff), that is the Transparent color.</p>
+<p>When this box is uncheck, all color store into the PLTE chunk.<span class="small">(If auxiliary color attribute is Transparency, then store into the tRNS chunk.)</span></p>
+<p>The default of this setting is 'Not Transparency(uncheck)'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="curve_with_point_guide">Show interpolation line</h4>
+<div class="indfirst_1_em">
+<p>This setting specify that choose of way show guid line.</p>
+<ul class="indhead_1_em">
+<li>Line<br />Merly straight line across controll point are shown.</li>
+<li>Curve<br />Interplated line are shown.</li>
+<li>Both<br />Both(line and curve) are shown.</li>
+</ul>
+<p>The default setting is 'Both'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="curve_with_point">Interpolated curve line</h4>
+<div class="indfirst_1_em">
+<p>The method of interpolation choose.</p>
+<ul class="indhead_1_em">
+<li>Lagrange<br />Interpolation method adopt the Lagrange interpolation.</li>
+<li>Spline<br />Interpolation methos adopt the Spline curve.</li>
+</ul>
+<p>The default method is 'the Lagrange interpolation'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="range_of_flood_fill">Range of colors</h4>
+<div class="indfirst_1_em">
+<p>Specify a range of colors with the flood fill(without a border color).</p>
+<p>The default setting is 0.</p>
+</div>
+<p><br /></p>
+
+<h4 id="synchro">View point synchronize with sub view</h4>
+<div class="indfirst_1_em">
+<p>View point of the main window synchronizes with the sub view window.</p>
+<p>The default of this setting is 'Not Synchronize(uncheck)'.</p>
+</div>
+<p><br /></p>
+
+<h4 id="synchro_color">Palette window synchronize with current color</h4>
+<div class="indfirst_1_em">
+<p>View point of the palette window synchronizes with current color.</p>
+<p>The default of this setting is 'Not Synchronize(uncheck)'.</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-003.html"><img class="prev" src="../../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../../parts/back.png" alt="Back" /></a><a href="./man-005.html"><img class="next" src="../../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

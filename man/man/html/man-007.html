@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::各種ウィンドウ</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-007.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>パレットウィンドウ</h3>
+<div class="indfirst_1_em">
+<p>このウィンドウは本ツールで前面に来ている主ウィンドウで編集している画像の「パレットの管理」を行います。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-017.png" alt="パレットウィンドウ" /></p>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_disclose">ウィンドウの拡縮</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-018.png" alt="disclose" />の部分をクリックすることにより、パレットウィンドウの幅を切り替えられます。</p>
+</div>
+<div class="qc">
+<div class="figs_block">
+<p><img src="../image/image-019.png" alt="縮小表示" /><br />縮小表示</p>
+</div>
+<div class="figs_block">
+<p><img src="../image/image-020.png" alt="拡大表示" /><br />拡大表示</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_colmix">色混合</h4>
+<div class="indfirst_1_em">
+<p>色を混ぜ合わせる際、色要素を RGB で演算するか HLS で演算するかを選択します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-021.png" alt="色混合" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>色混合そのものについて詳しくは<a href="./man-023.html">こちら</a>を参照してください。</p>
+</div>
+<p><br /></p>
+
+<h4 id="color_select">色選択</h4>
+<div class="indfirst_1_em">
+<p>全色の一覧を表示している部位をクリックすると、描画に使用する色を選択できます。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-022.png" alt="色一覧" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>また、<span class="bold">主ウィンドウ上で副ボタン（右ボタン）をクリック</span>して、その位置にある色を<span class="bold">選択色にする（色を吸い取る）</span>ことも可能です。</p>
+</div>
+<div class="indfirst_1_em">
+<p>選択中の色は左上隅に表示します。</p>
+</div>
+<div id="col_backlayer" class="indfirst_1_em">
+<p>この左上隅をクリックすると、背面レイヤーを吸い取ります（背面レイヤー吸い取り時は色一覧で選択中の色が無しになります）。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-023.png" alt="背面吸い取り時" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>また、色一覧でダブルクリックすると、その色に対する色要素・色補助属性を設定するシートが開きます。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-024.png" alt="色設定シート" /></p>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_elm">色要素の編集</h4>
+<div class="indfirst_1_em">
+<p>色要素の詳細を表示している部分では色要素の編集が可能です。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-025.png" alt="色詳細" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>１色づつの色情報を縦にならべており、次の図のようになっています。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-026.png" alt="色詳細１色づつ" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>なお、色要素・色補助属性については詳しくは<a href="./man-021.html">こちら（色要素）</a>と<a href="./man-022.html">こちら（色補助属性）</a>を参照してください。</p>
+<p>また、<span class="textred">色混合を HLS にしている場合、色要素の編集は行えません</span>。</p>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_altelm">色補助属性の一括指定</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-027.png" alt="altelements" />の部分をクリックすることにより、色補助属性設定シートが開き、複数の色に対する色補助属性を一括して設定できます。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-028.png" alt="色補助属性設定シート" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>浮き出したような表示になっている場合に、その属性が有効となります。</p>
+<p>このシートの色一覧でクリックやドラッグして各々の色の属性を設定します。</p>
+<p>隣接した色を連続して対象色とする場合は、その連続数をリスト下の範囲で指定します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_grad">グラデーション作成</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-029.png" alt="gradation" />の部分をクリックすることにより、パレットグラデーション作成シートが開き、グラデーションを作成できます。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-030.png" alt="パレットグラデーション作成シート" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>主ボタン（左ボタン）で開始色、副ボタン（右ボタン）で終了色を選択します。</p>
+<p>パレットグラデーションは色混合の指定に応じた色を作成します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-031.png" alt="RGB で作成" /><br />RGB で作成した場合</p>
+<p><img src="../image/image-032.png" alt="HLS で作成" /><br />HLS で作成した場合</p>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_exchange">色交換</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-033.png" alt="exchange" />の部分をクリックすることにより、色交換設定シートが開き、色要素の交換ができます。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-034.png" alt="色交換設定シート" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>主ボタン（左ボタン）で交換元、副ボタン（右ボタン）で交換先を選択して登録し、色を交換します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="palwin_copy">色複写</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-192.png" alt="copy" />の部分をクリックすることにより、色複写設定シートが開き、色要素の複写ができます。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-193.png" alt="色複写設定シート" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>主ボタン（左ボタン）で複写元、副ボタン（右ボタン）で複写先を選択して登録し、色を複写します。</p>
+</div>
+<p><br /></p>
+
+<h4 id="palette_lock">固定化</h4>
+<div class="indfirst_1_em">
+<p><img src="../image/image-035.png" alt="lock" />の部分をクリックすることにより、色要素の編集を禁止します（色補助属性の編集は可能です）。</p>
+<p>解除するには再度クリックしてください。</p>
+</div>
+<div class="qc">
+<div class="figs_block">
+<p><img src="../image/image-036.png" alt="固定化" /><br />固定化している場合</p>
+</div>
+<div class="figs_block">
+<p><img src="../image/image-037.png" alt="固定化解除" /><br />固定化を解除している場合</p>
+</div>
+</div>
+<p><br /></p>
+
+<h4 id="scroller_arrow">矢印</h4>
+<div class="indfirst_1_em">
+<p>右上にある▲▼はスクロールボタンです。これらは、渋々ながら追加しました。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-006.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-008.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

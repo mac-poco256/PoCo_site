@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::つかいかた::メニュー構成</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/man/html/man-015.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>表示</h3>
+<div class="indfirst_1_em">
+<p>表示に関する操作と画像情報に関する操作をまとめたメニューです。</p>
+</div>
+<p><br /></p>
+
+<table>
+
+<colgroup>
+<col style="width: 7.0em;" />
+<col />
+</colgrpoup>
+
+<tr>
+<th colspan="2">表示関連</th>
+</tr>
+<tr>
+<th>拡大</th>
+<td>主ウィンドウの表示倍率を変更（拡大）します。</td>
+</tr>
+<tr>
+<th>縮小</th>
+<td>主ウィンドウの表示倍率を変更（縮小）します。</td>
+</tr>
+<tr>
+<th>リセット</th>
+<td>主ウィンドウの表示倍率を１００％にリセットします。</td>
+</tr>
+
+<tr>
+<th colspan="2">画像情報関連</th>
+</tr>
+<tr>
+<th>画像情報</th>
+<td><a href="#doc_setup">画像情報パネル</a>を開き、画像に関する設定を行います。</td>
+</tr>
+<tr>
+<th>サイズを変更</th>
+<td><a href="#resize">サイズを変更パネル</a>を開き、画像の大きさを設定します。</td>
+</tr>
+
+</table>
+<p><br /></p>
+
+<h4 id="doc_setup">画像情報</h4>
+<div class="indfirst_1_em">
+<p>画像情報ダイアログでは、PNG 仕様に基づいた画像情報設定します<span class="small">（個々のパラメータの仔細は PNG 仕様について調べてください。その際、各々の CHUNK 名は括弧内に記述しています）</span>。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-090.png" alt="画像情報" /></p>
+</div>
+<ul class="indhead_2_em">
+<li>解像度<br />水平、垂直の解像度を指定します（pHYs）。</li>
+<li>背景を使用する<br />背景色（背景にする色番号）を指定します（bKGD）。</li>
+<li>色空間<br />色空間を指定します。<br />ICCプロファイル（iCCP）を埋め込む場合、ガンマ値（gAMA）・色温度（cHRM）・SRGB（sRGB） は指定できません。</li>
+</ul>
+<p><br /></p>
+
+<h4 id="resize">サイズを変更</h4>
+<div class="indfirst_1_em">
+<p>サイズを変更ダイアログでは、画像サイズの変更を設定します。</p>
+</div>
+<div class="qc">
+<p><img src="../image/image-091.png" alt="サイズ変更" /></p>
+</div>
+<div class="indfirst_1_em">
+<p>水平サイズ、垂直サイズをそれぞれ指定し<span class="button_item">変更する</span>をクリックするとサイズを変更します。</p>
+<div class="indfirst_1_em">
+<p>サイズに合わせて変形をチェックすると、画素も倍率に応じて変形（変倍）します。</p>
+</div>
+<!--
+<div class="qc">
+<p><img src="../image/image-092.jpg" alt="サイズフィットあり" /></p>
+</div>
+-->
+<div class="indfirst_1_em">
+<p>また、チェックしていない場合は、原点を左上としてサイズを変更します（画素は変形しません）。</p>
+</div>
+<!--
+<div class="qc">
+<p><img src="../image/image-093.jpg" alt="サイズフィットなし" /></p>
+</div>
+-->
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="./man-014.html"><img class="prev" src="../../../parts/prev.png" alt="Previous" /></a><a href="../man-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a><a href="./man-016.html"><img class="next" src="../../../parts/next.png" alt="Next" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>

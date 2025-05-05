@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="The PoCo.app is graphic editor for Mac(Mac OS X, OS X, macOS). The PoCo.app is specialized in editor of the 8-bits color picture. Although the 8-bits color(256 colors), the PoCo.app mainly target picture size is more larger rather than dot picture.</p>
+<meta name="keywords" content="PoCo,pixeleditor,doteditor,8bit,256color,mac,free" />
+<title>PoCo</title>
+<link rel="stylesheet" href="../styles/reset.css" />
+<link rel="stylesheet" href="../styles/styles.css" />
+<link rel="stylesheet" href="../styles/colors.css" />
+</head>
+<body class="title">
+<div class="centering">
+<div class="qr">
+<p><a href="../index.shtml"><span class="small maincolor underline">Japanese</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<!-- cover illust -->
+<div class="left">
+<a class="twitter-timeline" data-lang="en" data-width="300" data-height="350" data-link-color="#ef9fb3" href="https://twitter.com/mac_poco256?ref_src=twsrc%5Etfw">Tweets by mac_poco256</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<!-- table of contents -->
+<div class="right">
+
+<div class="qr">
+<p><img src="../parts/logo.png" alt="PoCo logo" /></p>
+</div>
+
+<div class="maincolor" style="padding-left: 10px; width: 310px;">
+<p>Welcome the web site of the PoCo.app.</p>
+<p>I'm pleased about you visit this site.</p>
+<p><br /></p>
+<p>The PoCo.app is graphic editor for Mac(Mac OS X, OS X, macOS).</p>
+<p>The PoCo.app is specialized in editor of the 8-bits color picture.(AKA, pixel art editor)</p>
+<p>Although the 8-bits color(256 colors), the PoCo.app mainly target picture size is more larger rather than dot picture(pixel art graphics).</p>
+<p><br /></p>
+</div>
+
+<a href="./about.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">Summary</span></p>
+</div>
+</a>
+
+<a href="./download.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">Distribution</span></p>
+</div>
+</a>
+
+<a href="./man/man.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">Manual</span></p>
+</div>
+</a>
+
+<a href="./history.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">History</span></p>
+</div>
+</a>
+
+<a href="./misc.html">
+<div class="toc brcolor_toc bkcolor_toc_grad shadow_gray">
+<p><span class="bold">Miscellaneous</span></p>
+</div>
+</a>
+
+</div>
+<hr class="sectionline" />
+
+<!-- memo/information -->
+<div class="floatleft maincolor">
+<p><!--#exec cgi="../cgi/txcount.cgi"--></p>
+</div>
+<div class="floatright qr maincolor">
+<p>last modify : Monday, 13th April, 2020.</p>
+<p>Version 1.4.0 has been released.</p>
+</div>
+</div>
+</body>
+</html>
