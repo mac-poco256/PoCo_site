@@ -73,8 +73,8 @@
 <p><!--#exec cgi="./cgi/txcount.cgi"--></p>
 </div>
 <div class="floatright qr maincolor">
-<p>last modify : 2020/04/13(Mon.)</p>
-<p>Version 1.4.0 公開</p>
+<p>last modify : 2025/05/06(Tue.)</p>
+<p>ソース管理を変更</p>
 </div>
 </div>
 </body>
