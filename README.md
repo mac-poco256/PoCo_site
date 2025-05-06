@@ -13,7 +13,7 @@ Main purpose of PoCo's web site is following:
 ## Contribution.
 
 The original documents are written in Japanese.  
-And, although the manual pages for English is available, I think that translation is too unskilful (almost all documents that are from my early days of learning English).  
+And, although the manual pages for English is available, I think that translation is too unskilful (almost all documents are from my early days of learning English).  
 So, if you find any errors (including typos) and/or mistranslation, please feel free to correct it or let me know one.   
 
 That's it, all.  
