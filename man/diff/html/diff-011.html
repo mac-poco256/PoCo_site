@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PoCo::へんこうてん::1.4.0 から 1.5.0</title>
+<link rel="stylesheet" href="../../../styles/reset.css" />
+<link rel="stylesheet" href="../../../styles/styles.css" />
+<link rel="stylesheet" href="../../../styles/colors.css" />
+</head>
+<body class="man_contents">
+<div class="centering">
+<div class="qr">
+<p><a href="../../../en/man/diff/html/diff-011.html"><span class="small maincolor">English</span></a></p>
+</div>
+<hr class="sectionline" />
+
+<h3>1.4.0 から 1.5.0 の変更点</h3>
+<div class="indfirst_1_em">
+<p>Version 1.4.0 から Version 1.5.0 へ更新するにあたり、変更となった内容についてまとめています。</p>
+</div>
+<p><br /></p>
+
+<h4 id="addition">追加</h4>
+<div class="indfirst_1_em">
+<p>新規に追加した機能は次のとおりです。</p>
+</div>
+<ul>
+<li>出力する実行バイナリを Intel と Arm の Universal Binary としました。</li>
+<li><a href="../../man/html/man-001.html#quick_look">QuickLook プレビュー</a>に対応しました。</li>
+<li>ペン先・タイルパターンを<a href="../../man/html/man-016.html">デフォルトへリセット</a>する機能を追加しました。</li>
+<li>選択中の<a href="../../man/html/man-010.html">レイヤーを真上に複製</a>する機能を追加しました。</li>
+</ul>
+<p><br /></p>
+
+<h4 id="replace_correct">変更（訂正）</h4>
+<div class="indfirst_1_em">
+<p>変更、ないし訂正した機能は次のとおりです。</p>
+</div>
+<ul>
+<li>最新の SDK を用いてビルドすると、いくつかの View が正常に再描画されない不具合を修正しました。</li>
+<li>最新の SDK を用いてビルドすると、レイヤーウィンドウのリストに左側に余計なアキが含まれる不具合を修正しました。</li>
+<li>レイヤーウィンドウのリストの各項目の幅を調整しました（省略表示になっていた不具合を修正しました）。</li>
+<li>パレット詳細が正常にスクロールできない不具合を修正しました。</li>
+<li>塗りつぶしを伴ったぼかしが正常に動作しない（画像を破壊する、あるいはアプリケーションがクラッシュする）不具合を修正しました。</li>
+<li>選択枠を用いた回転・変倍をおこなったのち、その選択枠内の画像に対する編集（左右・上下反転、自動グラデーション、色置換、およびテクスチャ）が正常に動作しない（画像を破壊する、あるいはアプリケーションがクラッシュする）不具合を修正しました。</li>
+<li>自動グラデーションの詳細設定シートをキャンセルしても、シートの設定がキャンセルとならない不具合を修正しました。</li>
+<li>validateMenuItem に対する実装を修正しました。この修正を実施するまでは、いくつかのメニューが不意に正常に動作しなくなっていた可能性があります。</li>
+<li>ペン先・タイルパターンを UserDefaults へ保存する際に用いる archiver を NSArchiver・NSUnarchiver から NSKeyedArchiver・NSKeyunarchiver へ変更しました。</li>
+<li>そのほか、deprecated と記されたメソッド・定数について修正を行いました。</li>
+</ul>
+<p><br /></p>
+
+<h4 id="delete_deprecate">削除（廃止）</h4>
+<div class="indfirst_1_em">
+<!--
+<p>削除、ないし廃止の機能はありません。</p>
+-->
+<p>変更（訂正）に記載のとおり、NSArchiver・NSUnarchiver から NSKeyArchiver・NSKeyedUnarchiver へ archiver を切り替えています。</p>
+<p>この変更の影響で、Version 1.4.0 と Version 1.5.0 の間では前方互換性のみが維持されています。</p>
+<p>具体的には、UserDefaults にユーザーが編集したペン先・タイルパターンがある場合、Version 1.5.0 を実行するとそれらは自動的に NSKeyedArchiver によって保存しなおされます。こののち、Version 1.4.0 やそれ以前の PoCo を起動すると、アプリケーションは正常に起動できなくなります（ペン先・タイルパターンについては保存の方法が変わったということであり、すなわち、後方互換性を維持していないということです）。</p>
+<p>もし、Version 1.5.0 を起動したのち、Version 1.4.0 以前の PoCo へ戻る場合は、<a href="../../man/html/man-016.html">パターンをデフォルトにリセット</a>する機能を用いるなどして、UserDefaults 内のペン先・タイルパータンをデフォルトにリセットしてください。</p>
+</div>
+<p><br /></p>
+
+<!-- nav -->
+<div class="qc">
+<p><a href="../diff-toc.html"><img class="back" src="../../../parts/back.png" alt="Back" /></a></p>
+</div>
+
+<hr class="sectionline" />
+</div>
+</body>
+</html>
